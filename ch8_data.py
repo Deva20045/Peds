@@ -1,0 +1,180 @@
+CH = 8
+UNITS = [
+    {"id": "PEDS-U066", "ch": 8, "n": 1, "title": "Phases of Growth", "sec": "Phases of Growth · p35", "qs": [], "guide": "Prenatal: zygote <2wks, embryo 3-8wks, fetus >9wks. Perinatal 22wks gestation →7d after birth. Postnatal: newborn 0-28d (early 0-7d/late 7-28d), infancy 1st yr, toddler 1-3, preschool 3-6, school 6-12, adolescence 10-19 (early 10-13/mid 14-16/late 17-19)."},
+    {"id": "PEDS-U067", "ch": 8, "n": 2, "title": "Pubertal Changes — Sequence", "sec": "Pubertal changes · p35", "qs": [], "guide": "Females onset 8-13y: thelarche→pubarche→growth spurt (↑height)→menarche. Males 9-14y: ↑testis (Prader orchidometer beads)→↑penis→pubarche/voice/pubic hair/spermarche→growth spurt→axillary/facial hair."},
+    {"id": "PEDS-U068", "ch": 8, "n": 3, "title": "Tanner SMR — Females & Males", "sec": "Tanner's SMR · p36", "qs": [], "guide": "Tanner assesses puberty. Females: breast I prepubertal →V adult (areola flatten + nipple). Pubic hair I→V sparse straight→curly→dense→medial thigh. Males: testis I 3mL (<4)→V 25mL (>20), penis 2.5→>4.5cm; III darkening scrotal skin; pubic hair same both sexes."},
+    {"id": "PEDS-U069", "ch": 8, "n": 4, "title": "Laws of Growth — Pattern", "sec": "Laws of Growth · p37", "qs": [], "guide": "Cephalocaudal head→toe (in utero→after birth). Limbs distal→proximal (fingers→arms). Tissues: brain 90% by 2y, gonadal ↑puberty, lymphoid 4-8y rapid, skeletal steady→spurt→fusion 18y F /20-22y M."},
+    {"id": "PEDS-U070", "ch": 8, "n": 5, "title": "Anthropometry — Weight", "sec": "Anthropometry · p37", "qs": [], "guide": "Birth wt India 2.8-3kg; <2.5kg LBW. Loss 10% 1st wk (extracellular fluid). Regains by 10d (14d preterm). Gain: 20-40g/d up to 3m, 400g/m up to 1y, 2kg/y up to 7y, 3kg/y after. Doubles 5-6m, triples 1y, quadruples 2y."},
+    {"id": "PEDS-U071", "ch": 8, "n": 6, "title": "Length/Height and Arm Span", "sec": "Length/Height · p38", "qs": [], "guide": "Length ≤2y supine infantometer; height >2y standing stadiometer (2 persons). 50cm→75cm (1y, +25) →87.5cm (2y, +12.5) →6cm/y→puberty spurt F 16-28cm M 20-30cm. Arm span: birth H>AS 2.5cm, 11y H=AS, >11y H<AS 1-2cm."},
+    {"id": "PEDS-U072", "ch": 8, "n": 7, "title": "Head and Chest Circumference", "sec": "Circumferences · p38", "qs": [], "guide": "HC = brain growth: 34cm→40cm (3m, +2/m)→43cm (6m, +1/m)→46cm (12m, +0.5/m)→48cm (2y, +2)→56cm (12y). CC at 4th ICS nipple line. HC>CC 3cm at birth, HC=CC at 1y, CC>HC after 1y."},
+    {"id": "PEDS-U073", "ch": 8, "n": 8, "title": "Mid-Arm Circumference and Skin Fold", "sec": "MAC · p39", "qs": [], "guide": "MAC 1-5y muscle+fat →nutrition, community level midpoint acromion-olecranon, Shakir’s tape: >12.5 green normal, 11.5-12.5 yellow malnutrition, <11.5 red severe. Skin fold biceps/subscapular/triceps Harpenden caliper: ≥10mm normal, <6mm severe."},
+    {"id": "PEDS-U074", "ch": 8, "n": 9, "title": "Growth Monitoring — Charts and MGRS", "sec": "Growth Monitoring · p39", "qs": [], "guide": "Charts: WHO <5y, IAP 5-18y. WHO since 2006, MGRS multicenter: children no anomalies, exclusive BF 6m; from India, USA, Oman, Brazil, Ghana, Norway. Blue boys, Pink girls."},
+    {"id": "PEDS-U075", "ch": 8, "n": 10, "title": "WHO Chart Interpretation and IAP", "sec": "WHO chart · p40", "qs": [], "guide": "Percentile = frequency; SD = deviation from mean (50th). Stunting <3rd or <-2SD, severe <-3SD; wasting weight-for-height same; underweight weight-for-age same; overweight +2 to +3SD, obesity >+3SD. IAP height-for-age <-2SD/<3rd; BMI chart adult equiv 23/27."},
+]
+
+def q(num, sec, page, qtext, opts, ans, exp):
+    assert len(opts)==4 and 0 <= ans <4
+    return {"id": f"PEDS-C8-{num:03d}", "sec": sec, "page": page, "q": qtext, "opts": opts, "ans": ans, "exp": exp}
+
+QUESTIONS = [
+    # U066 p35 1-16
+    q(1,"PEDS-U066",35,"Phases of Growth: Prenatal period includes",["Zygote/fertilized ovum <2 wks, Embryo 3-8 wks, Fetus >9 wks","Only zygote","Only fetus","Toddler 1-3 yrs"],0,"Prenatal: a. Zygote/fertilized ovum <2 wks, b. Embryo 3-8 wks, c. Fetus >9 wks (Book p35)"),
+    q(2,"PEDS-U066",35,"Zygote/fertilized ovum period",["<2 wks","3-8 wks",">9 wks","22 wks"],0,"Zygote/fertilized ovum <2 wks (Book p35)"),
+    q(3,"PEDS-U066",35,"Embryo period",["3-8 wks","<2 wks",">9 wks","10-19 yrs"],0,"Embryo 3-8 wks (Book p35)"),
+    q(4,"PEDS-U066",35,"Fetus period",[">9 wks","<2 wks","3-8 wks","0-7 days"],0,"Fetus >9 wks (Book p35)"),
+    q(5,"PEDS-U066",35,"Perinatal period",["22 wks of gestation up to 7 days after birth","0-7 days early","1st year","3-6 yrs"],0,"Perinatal period 22 wks of gestation up to 7 days after birth (Book p35)"),
+    q(6,"PEDS-U066",35,"Postnatal growth: Newborn is",["1st 4 wks","1st year","1-3 yrs","3-6 yrs"],0,"Postnatal growth a. Newborn 1st 4 wks (Book p35)"),
+    q(7,"PEDS-U066",35,"Newborn early vs late",["0-7 days Early, 7-28 days Late","0-14 days","0-3 months","0-1 year"],0,"0-7 days: Early, 7-28 days: Late (Book p35)"),
+    q(8,"PEDS-U066",35,"Infancy is",["1st year","1-3 yrs","3-6 yrs","6-12 yrs"],0,"b. Infancy 1st year (Book p35)"),
+    q(9,"PEDS-U066",35,"Toddler",["1-3 yrs","3-6 yrs","6-12 yrs","10-19 yrs"],0,"c. Toddler 1-3 yrs (Book p35)"),
+    q(10,"PEDS-U066",35,"Preschool child",["3-6 yrs","6-12 yrs","10-19 yrs","1-3 yrs"],0,"Preschool child 3-6 yrs (Book p35)"),
+    q(11,"PEDS-U066",35,"School age",["6-12 yrs","3-6 yrs","10-19 yrs","1st year"],0,"School age 6-12 yrs (Book p35)"),
+    q(12,"PEDS-U066",35,"Adolescence period",["10-19 yrs","6-12 yrs","3-6 yrs","22 wks-7d"],0,"Adolescence 10-19 yrs (Book p35)"),
+    q(13,"PEDS-U066",35,"Adolescence Early/Mid/Late",["Early 10-13 yrs, Mid 14-16 yr, Late 17-19 yrs","Early 8-13","Mid 9-14","Late 6-12"],0,"Adolescence: Early 10-13, Mid 14-16, Late 17-19 yrs (Book p35)"),
+    q(14,"PEDS-U066",35,"Phases of Growth header timestamp",["00:00:30","00:13:58","00:18:43","00:37:36"],0,"Phases of Growth 00:00:30 (Book p35)"),
+    q(15,"PEDS-U066",35,"Perinatal vs Postnatal distinction",["Perinatal 22wks→7d; Postnatal includes newborn/infancy/toddler etc","Same","Perinatal is 10-19y","Postnatal is <2wks"],0,"Perinatal 22wks→7d after birth; Postnatal splits newborn etc. (Book p35)"),
+    q(16,"PEDS-U066",35,"Newborn 1st 4 wks split indicates",["First 7d and 7-28d","First 14d only","First year","First 3 months"],0,"1st 4 wks →0-7d Early, 7-28d Late (Book p35)"),
+    # U067 p35 17-30
+    q(17,"PEDS-U067",35,"Age of onset of puberty Females",["8-13 yrs","9-14 yrs","10-13 yrs","6-12 yrs"],0,"Females Age of onset 8-13 yrs (Book p35)"),
+    q(18,"PEDS-U067",35,"Age of onset Males",["9-14 yrs","8-13 yrs","10-19 yrs","6-12 yrs"],0,"Males Age of onset 9-14 yrs (Book p35)"),
+    q(19,"PEDS-U067",35,"Sequence in Females",["Thelarche → Pubarche → Growth spurt (↑height) → Menarche","Menarche first","Pubarche first then thelarche","Growth spurt first"],0,"Females Thelarche →Pubarche →Growth spurt (↑height)→menarche (Book p35)"),
+    q(20,"PEDS-U067",35,"Thelarche definition",["Development of breast","Pubic hair","Menstruation","Growth spurt"],0,"Thelarche (Development of breast) (Book p35)"),
+    q(21,"PEDS-U067",35,"Sequence in Males starts with",["↑ size of testis assessed with Prader’s orchidometer","Menarche","Thelarche","Voice change first"],0,"↑ size of testis: Assess with Prader’s orchidometer (Book p35)"),
+    q(22,"PEDS-U067",35,"After testis size in males next is",["↑ size of penis","Menarche","Thelarche","Axillary hair"],0,"↑ size of testis → ↑ size of penis (Book p35)"),
+    q(23,"PEDS-U067",35,"Male puberty after penis size includes",["Pubarche → Growth spurt → Axillary & facial hair, with voice changes/pubic hair/spermarche around pubarche","Menarche","Thelarche","Only voice"],0,"↑ size of penis → Pubarche → Voice changes, Pubic hair appearance, Spermarche → Growth spurt → Axillary & facial hair (Book p35)"),
+    q(24,"PEDS-U067",35,"Pubarche in females follows",["Thelarche","Menarche","Growth spurt","Voice change"],0,"Thelarche → Pubarche (Book p35)"),
+    q(25,"PEDS-U067",35,"Menarche follows in females",["Growth spurt (↑ height)","Thelarche","Pubarche","Testis size"],0,"Growth spurt → menarche (Book p35)"),
+    q(26,"PEDS-U067",35,"Male: voice changes, pubic hair, spermarche cluster around",["Pubarche","Thelarche","Menarche","Growth spurt"],0,"Pubarche bracket Voice changes, Pubic hair, Spermarche (Book p35)"),
+    q(27,"PEDS-U067",35,"Final stage in males",["Axillary & facial hair","Menarche","Thelarche","Penis size"],0,"Growth spurt → Axillary & facial hair (Book p35)"),
+    q(28,"PEDS-U067",35,"Prader’s orchidometer note",["Contains beads that correspond to size of testis","Measures height","Measures weight","Measures HC"],0,"Note: Prader’s orchidometer → Contains beads that correspond to size of testis (Book p35)"),
+    q(29,"PEDS-U067",35,"Growth spurt in puberty refers to",["↑ height","↑ weight only","↑ HC only","No growth"],0,"Growth spurt (↑ height) (Book p35)"),
+    q(30,"PEDS-U067",35,"Females earlier than males in puberty onset",["Females 8-13 vs Males 9-14","Males earlier","Same","Females 10-19"],0,"Females 8-13 yrs earlier than males 9-14 yrs (Book p35)"),
+    # U068 p36 31-50
+    q(31,"PEDS-U068",36,"Tanner’s SMR used to assess",["Puberty based on external appearance","Weight","Height only","Seizures"],0,"Tanner’s sexual maturity rating (SMR): used to assess puberty: Based on external appearance (Book p36)"),
+    q(32,"PEDS-U068",36,"Females Tanner: Stage I Breast",["Prepubertal (No changes)","Appearance of breast buds","Generalised swelling","Adult-like"],0,"Stage I Breast: Prepubertal (No changes) (Book p36)"),
+    q(33,"PEDS-U068",36,"Stage II Breast",["Appearance of breast buds","Prepubertal","Generalised swelling","Form 2° mound"],0,"Appearance of breast buds (Book p36)"),
+    q(34,"PEDS-U068",36,"Stage III Breast",["Generalised swelling of breast","Prepubertal","Appearance buds","Adult like"],0,"Generalised swelling of breast (Book p36)"),
+    q(35,"PEDS-U068",36,"Stage IV Breast",["Form 2° mound: Separate projection of nipple & areola","Adult like","Generalised swelling","Prepubertal"],0,"Form 2° mound: Separate projection of nipple & areola (Book p36)"),
+    q(36,"PEDS-U068",36,"Stage V Breast",["Adult like appearance (Flattening of areola + nipple prominence)","Prepubertal","Buds","Generalised swelling"],0,"Adult like appearance (Flattening of areola + nipple prominence) (Book p36)"),
+    q(37,"PEDS-U068",36,"Pubic hair Stage I",["Prepubertal","Sparse & straight","↑ curly","Dense / Adult medial thigh"],0,"Pubic hair I Prepubertal (Book p36)"),
+    q(38,"PEDS-U068",36,"Stage II pubic hair",["Sparse & straight pubic hair","↑ curly","Dense","Adult"],0,"Sparse & straight pubic hair (Book p36)"),
+    q(39,"PEDS-U068",36,"Stage III pubic",["↑ pubic hair, curly","Sparse straight","Dense","Adult medial thigh"],0,"↑ pubic hair, curly (Book p36)"),
+    q(40,"PEDS-U068",36,"Stage IV pubic",["Dense pubic hair","Sparse","Curly only","Adult thigh"],0,"Dense pubic hair (Book p36)"),
+    q(41,"PEDS-U068",36,"Stage V pubic",["Adult like: Hair extends to medial side of thigh","Dense only","Curly","Sparse"],0,"Adult like appearance: Hair extends to medial side of thigh (Book p36)"),
+    q(42,"PEDS-U068",36,"Males Tanner I Testicular volume",["3 (<4 mL) penis 2.5cm","4 (≥4 mL) 2.5-3.2cm","10 3.6cm","25 >20mL"],0,"Stage I Testicular volume 3 (<4 mL) Penis 2.5cm (Book p36)"),
+    q(43,"PEDS-U068",36,"Stage II males",["4 (≥4 mL) 2.5-3.2cm","3 <4mL","10 3.6cm","16 4.1-4.5cm"],0,"Stage II 4 (≥4 mL) 2.5-3.2cm (Book p36)"),
+    q(44,"PEDS-U068",36,"Stage III males mark",["Darkening of scrotal skin, Testicular 10 (3.6cm)","Prepubertal","Adult like","Sparse"],0,"Darkening of scrotal skin ← Stage III, 10 (3.6cm) (Book p36)"),
+    q(45,"PEDS-U068",36,"Stage IV males",["16 (4.1-4.5cm)","3 <4mL","4 2.5-3.2","10 3.6"],0,"Stage IV 16 (4.1-4.5cm) (Book p36)"),
+    q(46,"PEDS-U068",36,"Stage V males",["25 (>20 mL) >4.5cm Adult like appearance","3 <4mL","4 2.5-3.2","10 3.6"],0,"Stage V 25 (>20 mL) >4.5cm Adult like appearance (Book p36)"),
+    q(47,"PEDS-U068",36,"Progressive feature in males",["Progressive increase in size & volume of testicles and penis","Decrease","No change","Only penis"],0,"Progressive increase in size & volume of testicles and penis (Book p36)"),
+    q(48,"PEDS-U068",36,"Note pubic hair changes are",["Same in males and females","Different","Only males","Only females"],0,"Note: Pubic hair changes are the same in males and females (Book p36)"),
+    # U069 p37 49-62
+    q(49,"PEDS-U069",37,"Pattern of Growth: Cephalocaudal means",["Growth of head → Growth of lower body and limbs (in utero)→(After birth)","Limbs first","Proximal first","Distal first"],0,"1. Cephalocaudal (Head to toe): Growth of head → Growth of lower body and limbs (in utero)(After birth) (Book p37)"),
+    q(50,"PEDS-U069",37,"Limbs growth",["Distal growth → Proximal growth. Eg: Fingers first then arms","Proximal→Distal","No pattern","Only proximal"],0,"2. Limbs: Distal growth → Proximal growth Eg: Fingers will grow first, then arms (Book p37)"),
+    q(51,"PEDS-U069",37,"Brain tissue growth completed",["90% in 2 years","50% in 2 years","10% in 2","90% at puberty"],0,"Brain tissue: 90% of growth is completed in 2 years (Book p37)"),
+    q(52,"PEDS-U069",37,"Gonadal growth",["↑ around puberty → Production of sex steroids","90% at 2y","4-8y rapid","Steady"],0,"Gonadal growth: ↑ around puberty → Production of sex steroids (Book p37)"),
+    q(53,"PEDS-U069",37,"Lymphoid growth (tonsils, lymph nodes)",["Rapid during 4-8 yrs of age (Become palpable)","90% at 2y","Steady","At puberty"],0,"Lymphoid growth: Rapid during 4-8 yrs of age (Become palpable) (Book p37)"),
+    q(54,"PEDS-U069",37,"Skeletal growth",["Steady process until puberty → Growth spurt at puberty → Fusion of epiphysis","90% at 2y","Rapid 4-8y","Distal→proximal"],0,"Skeletal growth: Steady process until puberty →Growth spurt at puberty →Completion/maturation: Fusion of epiphysis (Book p37)"),
+    q(55,"PEDS-U069",37,"Completion/maturation fusion ages",["18 yrs in females, 20-22 yrs in males (Generally taller)","Same both","Males 18, Females 20-22","12 yrs both"],0,"Completion: 18 yrs in females, 20-22 yrs in males (Generally taller) (Book p37)"),
+    q(56,"PEDS-U069",37,"Different tissues grow at different rates example",["Brain 90% 2y vs Gonadal puberty vs Lymphoid 4-8y vs Skeletal steady","All same","Only brain","Only skeletal"],0,"3. Different tissues grow at different rates: Eg Brain 90% 2y etc. (Book p37)"),
+    q(57,"PEDS-U069",37,"Laws of Growth header timestamp",["00:13:58","00:00:30","00:18:43","00:37:36"],0,"Laws of Growth 00:13:58 (Book p37)"),
+    q(58,"PEDS-U069",37,"Lymphoid tonsils become palpable age",["4-8 yrs","0-2 yrs","At puberty","At birth"],0,"Rapid during 4-8 yrs (Become palpable) (Book p37)"),
+    # U070 p37 59-78
+    q(59,"PEDS-U070",37,"Average birth weight in India",["2.8-3 Kg","<2.5 Kg",">3.5 Kg","1-1.5 Kg"],0,"Average birth weight in India: 2.8-3 Kg (Book p37)"),
+    q(60,"PEDS-U070",37,"Low birth weight",["<2.5 Kg → LBW","<1 Kg","<1.5 Kg","<3 Kg"],0,"<2.5 Kg → Low birth weight (LBW) (Book p37)"),
+    q(61,"PEDS-U070",37,"Normal weight loss after birth due to",["Extracellular fluid loss","Intracellular gain","Fat loss","Protein loss"],0,"D/t extracellular fluid loss (Book p37)"),
+    q(62,"PEDS-U070",37,"Normal weight loss %",["10% of body weight","14% in preterm is up to 14% (up to days: ↓ by 10% 14% in preterm)","5%","20%"],0,"10% of body weight (14% in preterm) 1st week after birth (Book p37)"),
+    q(63,"PEDS-U070",37,"Timing of normal loss",["1st week after birth","2nd week","At birth","After 1 month"],0,"1st week after birth (Book p37)"),
+    q(64,"PEDS-U070",37,"By 10 days (By 14 days in preterm)",["Regains birth weight","Doubles","Triples","Loses further"],0,"By 10 days (By 14 days in preterm) Regains birth weight (Book p37)"),
+    q(65,"PEDS-U070",37,"Up to 3 months weight gain",["↑ 20-40 g/day","↑ 400 g/month","↑2 Kg/year","↑3 Kg/year"],0,"Upto 3 months ↑20-40 g/day (Book p37)"),
+    q(66,"PEDS-U070",37,"Upto 1 year",["↑400 g/month","↑20-40 g/day","↑2 Kg/year","↑3 Kg/year"],0,"Upto 1 year ↑400 g/month (Book p37)"),
+    q(67,"PEDS-U070",37,"Upto 7 years",["↑2 Kg/year","↑400 g/month","↑3 Kg/year","↑20-40 g/day"],0,"Upto 7 years ↑2 Kg/year (Book p37)"),
+    q(68,"PEDS-U070",37,"After 7 yrs",["↑3 Kg/year","↑2 Kg/year","↑400 g/month","↑20g/day"],0,"After 7 yrs ↑3 Kg/year (Book p37)"),
+    q(69,"PEDS-U070",37,"Weight doubles at",["5-6 months","1 year","2 years","10 days"],0,"With respect to weight: Doubles: 5-6 months (Book p37)"),
+    q(70,"PEDS-U070",37,"Triples at",["1 year","5-6 months","2 years","3 months"],0,"Triples: 1 year (Book p37)"),
+    q(71,"PEDS-U070",37,"Quadruples at",["2 years","1 year","5-6 months","7 years"],0,"Quadruples: 2 years (Book p37)"),
+    q(72,"PEDS-U070",37,"Anthropometry methods to assess growth header",["00:18:43","00:00:30","00:13:58","00:37:36"],0,"Anthropometry 00:18:43 (Book p37)"),
+    q(73,"PEDS-U070",37,"Upto days weight loss table entry",["↓ by 10% (14% in preterm)","Regains","↑20-40","↑400"],0,"Upto days ↓ by 10% (14% in preterm) (Book p37)"),
+    # U071 p38 79-95
+    q(74,"PEDS-U071",38,"Length vs Height: Length measured",["Upto 2 yrs old → measured while supine with infantometer",">2 yrs standing","At birth only","After 7 yrs"],0,"Length: upto 2 yrs old → measured while supine with infantometer (Book p38)"),
+    q(75,"PEDS-U071",38,"Height measured",[">2 yrs old → measured while standing with stadiometer","Upto 2 yrs supine","At birth","After 12 yrs"],0,"Height: >2 yrs old → measured while standing with stadiometer (Book p38)"),
+    q(76,"PEDS-U071",38,"Equipments: Infantometer vs Stadiometer position",["One person at foot end, One person at head end (infantometer); Stadiometer height board fixed baseboard","One person only","No persons","Head end only"],0,"Equipments: One person at foot end One person at head end (Book p38)"),
+    q(77,"PEDS-U071",38,"Stadiometer vs Infantometer diagram labels",["Movable headboard, Fixed baseboard (Stadiometer) vs Move quickly before baby agitated (Infantometer)","Same","No diagram","Only infantometer"],0,"Stadiometer Fixed baseboard Movable headboard; Infantometer Move quickly (Book p38)"),
+    q(78,"PEDS-U071",38,"Pattern: Birth height",["50 cm","75 cm","87.5 cm","56 cm"],0,"Birth 50 cm (Book p38)"),
+    q(79,"PEDS-U071",38,"Birth→1 yr increase",["+25 cm →75 cm","+12.5 cm","+6 cm/yr","+16-28 cm"],0,"Birth 50cm +25cm →75cm (1 yr) (Book p38)"),
+    q(80,"PEDS-U071",38,"1yr→2yrs",["+12.5 cm →87.5 cm","+25 cm","+6 cm/yr","+20-30 cm"],0,"75cm +12.5 →87.5 cm (2 yrs) (Book p38)"),
+    q(81,"PEDS-U071",38,"After 2 yrs to puberty",["6 cm/yr","12.5 cm","25 cm","16-28 cm"],0,"87.5cm →6cm/yr → Growth spurt Puberty (Book p38)"),
+    q(82,"PEDS-U071",38,"Puberty growth spurt Females",["16-28 cm","20-30 cm","25 cm","12.5 cm"],0,"Puberty Growth spurt Females: 16-28 cm (Book p38)"),
+    q(83,"PEDS-U071",38,"Males puberty spurt",["20-30 cm","16-28 cm","12.5 cm","25 cm"],0,"Males: 20-30 cm (Book p38)"),
+    q(84,"PEDS-U071",38,"Arm span definition",["Distance b/w middle fingers of outstretched hands","HC","CC","MAC"],0,"Arm span: Distance b/w middle fingers of outstretched hands (Book p38)"),
+    q(85,"PEDS-U071",38,"Arm span in un-co-operative children use",["Height vs Arm span relation","Direct measure only","HC","Weight"],0,"In un co-operative children: Use arm span (Book p38)"),
+    q(86,"PEDS-U071",38,"Birth: Height vs arm span",["Height > arm span by 2.5 cm","Height = arm span","Height < arm span","No relation"],0,"Birth: Height > arm span by 2.5 cm (Book p38)"),
+    q(87,"PEDS-U071",38,"At 11 yrs",["Height = Arm span","Height > AS 2.5","Height < AS 1-2","No"],0,"At 11 yrs of age: Height = Arm span (Book p38)"),
+    q(88,"PEDS-U071",38,">11 yrs",["Height < arm span by 1-2 cm","Height > AS","Height = AS","No"],0,">11 yrs: Height < arm span by 1-2 cm (Book p38)"),
+    q(89,"PEDS-U071",38,"Stadiometer board parts",["Fixed baseboard, Movable headboard, Height board","No headboard","Only tape","Only caliper"],0,"Fixed baseboard + Movable headboard (Book p38)"),
+    # U072 p38 90-102
+    q(90,"PEDS-U072",38,"Head circumference reflection",["Reflection of brain growth","Nutrition","Fat","Muscle"],0,"Head circumference (HC): Reflection of brain growth (Book p38)"),
+    q(91,"PEDS-U072",38,"HC at Birth",["34 cm","40 cm","43 cm","46 cm"],0,"Birth 34 cm (Book p38)"),
+    q(92,"PEDS-U072",38,"HC at 3 months",["40 cm (+2 cm/month)","34 cm","43 cm","48 cm"],0,"34→40 cm at 3 months +2 cm/month (Book p38)"),
+    q(93,"PEDS-U072",38,"HC at 6 months",["43 cm (+1 cm/month)","40 cm","46 cm","48 cm"],0,"40→43 cm at 6 months +1 cm/month (Book p38)"),
+    q(94,"PEDS-U072",38,"HC at 12 months",["46 cm (+0.5 cm/month)","48 cm","56 cm","40 cm"],0,"43→46 cm at 12 months +0.5 cm/month (Book p38)"),
+    q(95,"PEDS-U072",38,"HC at 2 years",["48 cm (+2 cm)","46 cm","56 cm","34 cm"],0,"46→48 cm at 2 years +2 cm (Book p38)"),
+    q(96,"PEDS-U072",38,"HC at 12 years",["56 cm minimal increase","48 cm","46 cm","34 cm"],0,"48→56 cm at 12 years minimal increase (Book p38)"),
+    q(97,"PEDS-U072",38,"Chest circumference measured at",["4th intercostal space (roughly at nipples) in children","Head","Arm","Leg"],0,"Chest circumference: Measured at 4th intercostal space (roughly at level of nipples) in children (Book p38)"),
+    q(98,"PEDS-U072",38,"HC vs CC At birth",["HC > CC by 3 cm","HC = CC","CC > HC","No diff"],0,"At birth: HC > CC (By 3 cm) (Book p38)"),
+    q(99,"PEDS-U072",38,"By 1 year HC vs CC",["HC = CC","HC > CC","CC > HC","No"],0,"By 1 year: HC = CC (Book p38)"),
+    q(100,"PEDS-U072",38,"After 1 year",["CC > HC","HC > CC","HC = CC","No"],0,"After 1 year: CC > HC (Book p38)"),
+    # U073 p39 103-115
+    q(101,"PEDS-U073",39,"Mid arm circumference measured in age",["1-5 yrs","0-1 yr","5-18 yrs","<2 yrs"],0,"Measured in age groups of 1-5 yrs (Book p39)"),
+    q(102,"PEDS-U073",39,"MAC depends on",["Muscle mass & fat → Indicator of nutritional status","Only bone","Only HC","Only weight"],0,"Depends on muscle mass & fat → Indicator of nutritional status (Book p39)"),
+    q(103,"PEDS-U073",39,"MAC measured at",["Community level: midpoint Acromion process—Olecranon process","Hospital only","Head","Chest"],0,"Measured at community level: measured at midpoint Acromion—Olecranon (Book p39)"),
+    q(104,"PEDS-U073",39,"Shakir’s tape thresholds",["Red <11.5 cm Severe malnutrition, Yellow 11.5-12.5 malnutrition, Green >12.5 Normal","Red 12.5 Severe","Yellow 10","Green 11.5"],0,"Shakir’s tape Red >11.5? Yellow 11.5-12.5, Green >12.5 (image: Red <11.5 severe, Yellow 11.5-12.5, Green >12.5 normal) (Book p39)"),
+    q(105,"PEDS-U073",39,"Shakir’s tape: Yellow is",["11.5-12.5 cm (malnutrition)",">12.5 Normal",">11.5 Severe","<10 Severe"],0,"Yellow: 11.5-12.5 cm (malnutrition) (Book p39)"),
+    q(106,"PEDS-U073",39,"Shakir’s tape Green",[">12.5 cm Normal","11.5-12.5","<11.5","<10"],0,"Green >12.5 cm (Normal) (Book p39)"),
+    q(107,"PEDS-U073",39,"Shakir’s tape red",["<11.5 cm Severe malnutrition",">12.5","11.5-12.5","≥10"],0,"Red >11.5? Actually <11.5 cm Severe malnutrition (Book p39)"),
+    q(108,"PEDS-U073",39,"Skin fold thickness sites",["Biceps, subscapular, triceps","Only biceps","Only triceps","Head"],0,"Sites: Biceps, subscapular, triceps (Book p39)"),
+    q(109,"PEDS-U073",39,"Skin fold assessment → Nutritional status via",["Assessment of subcutaneous fat (Harpenden’s caliper)","Brain growth","Bone","HC"],0,"Assessment of subcutaneous fat → Nutritional status, Harpenden’s caliper (Book p39)"),
+    q(110,"PEDS-U073",39,"Harpenden’s caliper Normal vs Severe",["Normal ≥10 mm, Severe malnutrition <6 mm","Normal <6, Severe ≥10","Normal 11.5","Normal 12.5"],0,"Normal: ≥10 mm, Severe malnutrition: <6 mm (Book p39)"),
+    # U074 p39 111-125
+    q(111,"PEDS-U074",39,"Growth Monitoring monitored by",["Plotting on growth charts","Only weight","Only height","No charts"],0,"Monitored by plotting on growth charts (Book p39)"),
+    q(112,"PEDS-U074",39,"Types: WHO charts for",["<5 yrs","5-18 yrs","Consolidated",">12 yrs"],0,"WHO charts: For <5 yrs (Book p39)"),
+    q(113,"PEDS-U074",39,"IAP chart for",["5-18 yrs","<5 yrs","<2 yrs",">18 yrs"],0,"Indian Academy of Pediatrics (IAP) chart: 5-18 yrs (Book p39)"),
+    q(114,"PEDS-U074",39,"WHO since",["2006","2000","2010","1990"],0,"Since 2006 (Book p39)"),
+    q(115,"PEDS-U074",39,"WHO internationally used chart based on",["Multicentric growth reference study (MGRS)","Single center","Only India","Only USA"],0,"Chart based on multicentric growth reference study (MGRS) (Book p39)"),
+    q(116,"PEDS-U074",39,"MGRS children Who:",["Had no developmental anomalies, Exclusively breastfed for 6 months","Had anomalies","Not breastfed","Had infections"],0,"Who: Had no developmental anomalies, Exclusively breastfed for 6 months (Book p39)"),
+    q(117,"PEDS-U074",39,"MGRS From: countries include",["Developed & underdeveloped: India, USA, Oman, Brazil, Ghana, Norway","Only India","Only USA","Only Europe"],0,"From: Developed & underdeveloped countries India, USA, Oman, Brazil, Ghana, Norway (Book p39)"),
+    q(118,"PEDS-U074",39,"MGRS includes how many countries in image",["6: India, USA, Oman, Brazil, Ghana, Norway","3","10","2"],0,"India, USA, Oman, Brazil, Ghana, Norway (6) (Book p39)"),
+    q(119,"PEDS-U074",39,"Upto days weight loss again in Growth Monitoring",["Related to extracellular fluid but chart shows WHO vs IAP","Not related","Only WHO","Only IAP"],0,"Growth Monitoring Types: WHO <5, IAP 5-18, Consolidated (Book p39)"),
+    # U075 p40 126-140
+    q(120,"PEDS-U075",40,"Colour of WHO chart Boys vs Girls",["Blue (Boys), Pink (Girls)","Red Boys Green Girls","Yellow","No colour"],0,"Colour: Blue (Boys), Pink (Girls) (Book p40)"),
+    q(121,"PEDS-U075",40,"Variants: Percentile definition",["Frequency distribution of a given value","Deviation from mean","SD","Mean"],0,"1. Percentile: Frequency distribution of a given value (Book p40)"),
+    q(122,"PEDS-U075",40,"SD definition",["Deviation from mean value (50th percentile)","Frequency","Mean","Median"],0,"Standard deviation (SD): Deviation from mean value (50th percentile) (Book p40)"),
+    q(123,"PEDS-U075",40,"Diagram HIGH/LOW with +2SD to -2SD and mean/50th shown as",["Standard deviation & percentiles in growth chart: HIGH mean +2SD etc LOW -2SD","Not shown","Only mean","Only percentile"],0,"Standard deviation & percentiles in growth chart diagram (Book p40)"),
+    q(124,"PEDS-U075",40,"Stunting/short stature",["Height for age <3rd percentile or <-2 SD","<3SD only","Weight for height","BMI"],0,"Stature Height for age Stunting/short stature <3rd percentile or <-2 SD (Book p40)"),
+    q(125,"PEDS-U075",40,"Severe stunting",["<-3 SD","<-2 SD","<3rd percentile","+2SD"],0,"Severe stunting <-3 SD (Book p40)"),
+    q(126,"PEDS-U075",40,"Wasting is",["Weight for height <3rd percentile / <-2 SD","Height for age","Weight for age","BMI"],0,"Undernutrition Weight for height Wasting <3rd / <-2 SD (Book p40)"),
+    q(127,"PEDS-U075",40,"Severe wasting",["<-3 SD","<-2 SD","+2SD",">3SD"],0,"Severe wasting <-3 SD (Book p40)"),
+    q(128,"PEDS-U075",40,"Underweight",["Weight for age <3rd percentile / <-2 SD","Height for age","Weight for height","BMI"],0,"Status Weight for age Underweight <3rd / <-2 SD (Book p40)"),
+    q(129,"PEDS-U075",40,"Severely underweight",["<-3 SD","<-2 SD","+2SD","Normal"],0,"Severely underweight <-3 SD (Book p40)"),
+    q(130,"PEDS-U075",40,"Overweight Weight for height",["+2 to +3 SD","<-2SD","<-3SD",">3SD"],0,"Overweight +2 to +3 SD (Book p40)"),
+    q(131,"PEDS-U075",40,"Obesity",["> +3 SD","+2 to +3","<-2","<-3"],0,"Obesity > +3 SD (Book p40)"),
+    q(132,"PEDS-U075",40,"IAP Charts: Height for age to assess stunting",["<-2 SD or <3rd percentile",">3SD","+2SD","Normal"],0,"IAP: Height for age chart: Assess stunting: <-2 SD or <3rd percentile (Book p40)"),
+    q(133,"PEDS-U075",40,"BMI chart adult equivalent in image",["Overweight 23? 25? Image shows 23 and 27 Adult equivalent: 27 Obesity 23 Overweight","Normal","Under","Severe"],0,"BMI chart: 23 Adult equivalent Overweight 27 Obesity? Actually Image: 27 Adult equivalent Obesity 23 Adult equivalent Overweight (Book p40)"),
+    q(134,"PEDS-U075",40,"BMI chart percentiles shown",["Percentiles 3,5,10,25,50,85,97 etc with Thin/Normal/Overweight/Obesity","Only 50th","Only 3rd","No"],0,"Percentiles 3 thin to 97 obesity, Thin at bottom, Obesity top, Overweight zone (Book p40)"),
+    q(135,"PEDS-U075",40,"WHO vs IAP age cutoffs again",["WHO <5, IAP 5-18","WHO 5-18, IAP <5","Both <5","Both 5-18"],0,"WHO <5 yrs, IAP 5-18 yrs (Book p39-40)"),
+]
+
+# Assign
+RANGES = {66:(1,16),67:(17,30),68:(31,48),69:(49,58),70:(59,73),71:(74,89),72:(90,100),73:(101,110),74:(111,119),75:(120,135)}
+UNIT_RANGES = {1:(1,16),2:(17,30),3:(31,48),4:(49,58),5:(59,73),6:(74,89),7:(90,100),8:(101,110),9:(111,119),10:(120,135)}
+for u in UNITS:
+    s,e = UNIT_RANGES[u["n"]]
+    u["qs"] = [f"PEDS-C8-{i:03d}" for i in range(s,e+1)]
+
+pages = [q["page"] for q in QUESTIONS]
+assert pages == sorted(pages), f"Pages not sorted {pages}"
+assert len(QUESTIONS)==135
+assert len(UNITS)==10
+for u in UNITS:
+    s,e = UNIT_RANGES[u["n"]]
+    assert len(u["qs"])==e-s+1
