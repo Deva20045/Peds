@@ -69,7 +69,7 @@ Haematology (50–52) · Miscellaneous (53–54).
 | 24 | Disorders of Liver in Children | 104 | 7 | ✅ DONE — 129 Q, 10 units |
 | 25 | Surgical GI Disorders in Children | 111 | 5 | ✅ DONE — 95 Q, 9 units |
 | 26 | Airway Malformations and Foreign Bodies | 116 | 4 | ✅ DONE — 121 Q, 9 units |
-| 27 | Asthma | 120 | 4 | ⏳ |
+| 27 | Asthma | 120 | 4 | ✅ DONE — 141 Q, 10 units |
 | 28 | Respiratory Infections | 124 | 6 | ⏳ |
 | 29 | Cystic Fibrosis | 130 | 3 | ⏳ |
 | 30 | Fetal Circulation and Introduction to Congenital Heart Diseases | 133 | 3 | ⏳ |
@@ -189,5 +189,19 @@ Page math: 258 content pages (2–259) + 1 cover = 259 PDF pages ✓
   - Format mix 65 MCQ · 30 fill · 9 T/F (5 T / 4 F) · 7 match · 6 odd · 4 clinical cases; answer-key rotation → uniform index distribution (28/28/28/28 non-TF); length-giveaway check clean; 4 authoring defects caught & fixed during review (2 option/answer-index mismatches, 2 odd-one-out keys, 1 duplicate IOC pair) + 6 fill-blank markers normalised to `___`
   - Build: `validate.py` **2662 Q / 221 U / 26 chapters / 0 errors** (1 pre-existing warn C5-038); `node --check` on the extracted script OK; `validate.js` extended with a **full CH26 playthrough (all 121 Q across 9 units)** → ALL CHECKS PASSED
 - [x] App rebuilt: **2662 questions live (26 chapters, 221 units)** — home hero shows "26 of 54"
-- [ ] **NEXT: CH27 Asthma (p120–123)**
-- [ ] Pending in this book: CH27–CH54 (source PDFs already present in `source/chapters/`)
+- [x] **RESPIRATORY BATCH #2 — CH27 Asthma (p120–123): DONE** — 141 Q, 10 units (U222–U231), line-by-line against the 200 dpi renders + 350–400 dpi zooms (table values, ICS dose bands, review-after-2-months flow, exacerbation table, device age cut-offs):
+  - **U222 Characteristics & phenotypes** (bronchoconstriction d/t airway hyper-responsiveness + chronic airway inflammation, reversible obstruction, variable intensity & frequency, management by subjective symptoms; allergic/atopic m/c in children with good response vs non-allergic m/c in adults difficult to treat; exercise-induced) + odd-one-out
+  - **U223 Phases** (early: allergen→IgE→IgE-bound mast cell, degranulation within 10 min, histamine most important + prostaglandins/leukotrienes C,D,E/bradykinin → bronchoconstriction, mucosal edema, ↑ secretions → β2-agonist; late: 3–4 h onset, peak 10–12 h, eosinophil/basophil/lymphocyte recruitment, repeated exposure → chronic inflammation, steroids inhibit) + 2 T/F + match + odd-one-out
+  - **U224 Clinical features** (recurrent wheeze/cough/chest tightness; ↑ late night/early mornings; varying intensity & frequency) + T/F
+  - **U225 Lung function** (FEV1 ↓ with FEV1/FVC < 0.8; bronchodilator FEV1 ↑ > 12%; exercise FEV1 ↓ > 15%; diurnal AM–PM FEV1/PEF ↑ > 20%) + match + case + odd-one-out
+  - **U226 Management & steps** (GINA; exacerbating factors + pharmacotherapy; > 12 yr as adults; 6–11 yr stepwise; reliever SABA SOS; Steps I–V table with SABA/ICS/LABA escalation and biological agents last resort) + match + step-IV case + T/F
+  - **U227 Drugs** (SABA, LABA formoterol synergistic + steroid-sparing; budesonide ICS low 200–400 / medium 400–800 / high > 800 mcg; omalizumab anti-IgE, mepolizumab anti-IL5, dupilumab anti-IL4 receptor, anti-TSLP thymic stromal lymphopoietin) + match + odd-one-out
+  - **U228 Preschool < 5 yr** (may resolve > 5 yr; episodic vs multitrigger wheeze — cold, exertion, food; ↑ probability: > 10 d after URI AND > 3 episodes; daily low-dose ICS + SABA, review 2 months → improvement = stop, no improvement = 6–11 yr protocol) + case + odd-one-out
+  - **U229 Exacerbation classification** (sensorium normal/anxious/agitated; retractions absent/moderate/severe; SpO2 > 95 / 90–95 / < 90%; PEFR > 80 / 60–80 / < 60%) + match + severe-exacerbation case
+  - **U230 Exacerbation management** (mild — MDI salbutamol 4–10 puffs q20min; moderate — salbutamol + ipratropium (centrally acting anticholinergic) + O2 to keep SpO2 > 95% + oral prednisolone; severe — nebulised salbutamol + ipratropium + oral prednisolone or iv hydrocortisone + inj magnesium sulphate) + match + severe case + 2 T/F + odd-one-out
+  - **U231 Devices** (by age: ≥ 12 yr MDI; 4–12 yr MDI + spacer; < 4 yr MDI + spacer + face mask; spacer suspends drug → inhaled over few breaths; rotahaler not commonly used — mouth piece, insertion hole, rota chamber/rotacap powdered on twisting) + match + device case + odd-one-out
+  - Format mix 69 MCQ · 35 fill · 17 T/F (9 T / 8 F) · 7 match · 7 odd · 6 clinical cases; answer-key rotation → 31/31/31/31 non-TF index distribution; 5 fill stems normalised to `___`
+  - Build: `validate.py` **2803 Q / 231 U / 27 chapters / 0 errors** (1 pre-existing warn C5-038); `node --check` OK; `validate.js` extended with a **full CH27 playthrough (all 141 Q across 10 units)** → ALL CHECKS PASSED
+- [x] App rebuilt: **2803 questions live (27 chapters, 231 units)** — home hero shows "27 of 54"
+- [ ] **NEXT: CH28 Respiratory Infections (p124–129)**
+- [ ] Pending in this book: CH28–CH54 (source PDFs already present in `source/chapters/`)

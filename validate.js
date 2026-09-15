@@ -66,9 +66,9 @@ const ok = (cond, msg) => { console.log((cond ? '  ✓ ' : '  ✗ FAIL ') + msg)
 
 /* ---------------- 1. boot / home ---------------- */
 console.log('— boot & home');
-ok(A.QUESTIONS.length === 2662, `QUESTIONS loaded (${A.QUESTIONS.length})`);
-ok(A.CHAPTERS.filter(c => c.live).length === 26, '26 live chapters');
-ok($('heroSub').textContent.includes('26 of 54'), 'home hero shows "26 of 54"');
+ok(A.QUESTIONS.length === 2803, `QUESTIONS loaded (${A.QUESTIONS.length})`);
+ok(A.CHAPTERS.filter(c => c.live).length === 27, '27 live chapters');
+ok($('heroSub').textContent.includes('27 of 54'), 'home hero shows "27 of 54"');
 
 /* ---------------- 2. chapters list ---------------- */
 console.log('— chapters');
@@ -206,7 +206,33 @@ for (const u of ch26u) {
 ok(n26 === 121, `all 121 CH26 questions answered (${n26})`);
 ok(multiCorrect === 0, 'every CH26 question has exactly one correct option');
 ok(['mcq', 'fill', 'tf', 'match', 'case', 'odd'].every(t => seen26.has(t)), `CH26 covers all 6 formats: ${[...seen26].sort().join(', ')}`);
-console.log('— after CH26'); ok(A.CHAPTERS.filter(c => c.live).length === 26, '26 live chapters after playthrough');
+console.log('— after CH26'); ok(A.CHAPTERS.filter(c => c.live).length === 27, '27 live chapters after playthrough');
+
+/* ---------------- 7. full CH27 playthrough (Asthma) ---------------- */
+console.log('— full CH27 playthrough (141 Q / 10 units)');
+const ch27u = A.unitsOf(27);
+ok(ch27u.length === 10, `CH27 has 10 units (${ch27u.length})`);
+ok(ch27u.reduce((n, u) => n + u.qs.length, 0) === 141, 'CH27 has 141 questions');
+const seen27 = new Set();
+let n27 = 0, multi27 = 0;
+for (const u of ch27u) {
+  A.openGuide(u);
+  ok($('gTitle').textContent === u.title && $('gCount').textContent.startsWith(u.qs.length + ' questions'), `guide renders for ${u.id}`);
+  A.beginUnit();
+  ok(A.order.length === u.qs.length, `${u.id}: ${A.order.length} questions in book order`);
+  while (A.order[A.idx]) {
+    const cur = A.order[A.idx];
+    seen27.add(cur.q.type || 'mcq');
+    const btns = $('opts').children;
+    const ci = btns.map((b, i) => (cur.opts[i] && cur.opts[i].ok) ? i : -1).filter(i => i >= 0);
+    if (ci.length !== 1) multi27++;
+    btns[ci[0]].click();
+    A.nextQ(); n27++;
+  }
+}
+ok(n27 === 141, `all 141 CH27 questions answered (${n27})`);
+ok(multi27 === 0, 'every CH27 question has exactly one correct option');
+ok(['mcq', 'fill', 'tf', 'match', 'case', 'odd'].every(t => seen27.has(t)), `CH27 covers all 6 formats: ${[...seen27].sort().join(', ')}`);
 
 console.log(fails ? `\n${fails} FAILURES` : '\nALL CHECKS PASSED ✓');
 process.exit(fails ? 1 : 0);
