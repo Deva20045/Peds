@@ -66,9 +66,9 @@ const ok = (cond, msg) => { console.log((cond ? '  ✓ ' : '  ✗ FAIL ') + msg)
 
 /* ---------------- 1. boot / home ---------------- */
 console.log('— boot & home');
-ok(A.QUESTIONS.length === 2541, `QUESTIONS loaded (${A.QUESTIONS.length})`);
-ok(A.CHAPTERS.filter(c => c.live).length === 25, '25 live chapters');
-ok($('heroSub').textContent.includes('25 of 54'), 'home hero shows "25 of 54"');
+ok(A.QUESTIONS.length === 2662, `QUESTIONS loaded (${A.QUESTIONS.length})`);
+ok(A.CHAPTERS.filter(c => c.live).length === 26, '26 live chapters');
+ok($('heroSub').textContent.includes('26 of 54'), 'home hero shows "26 of 54"');
 
 /* ---------------- 2. chapters list ---------------- */
 console.log('— chapters');
@@ -178,6 +178,35 @@ for (const t of ['match', 'case', 'odd']) {
     A.show('home');
   }
 }
+
+/* ---------------- 6. full CH26 playthrough (Airway Malformations & Foreign Bodies) ---------------- */
+console.log('— full CH26 playthrough (121 Q / 9 units)');
+const ch26u = A.unitsOf(26);
+ok(ch26u.length === 9, `CH26 has 9 units (${ch26u.length})`);
+ok(ch26u.reduce((n, u) => n + u.qs.length, 0) === 121, 'CH26 has 121 questions');
+const seen26 = new Set();
+let n26 = 0, multiCorrect = 0;
+for (const u of ch26u) {
+  A.openGuide(u);
+  ok($('gTitle').textContent === u.title && $('gCount').textContent.startsWith(u.qs.length + ' questions'), `guide renders for ${u.id}`);
+  A.beginUnit();
+  ok(A.order.length === u.qs.length, `${u.id}: ${A.order.length} questions in book order`);
+  while (A.order[A.idx]) {
+    const cur = A.order[A.idx];
+    seen26.add(cur.q.type || 'mcq');
+    const btns = $('opts').children;
+    const correctIdx = btns.map((b, i) => (cur.opts[i] && cur.opts[i].ok) ? i : -1).filter(i => i >= 0);
+    if (correctIdx.length !== 1) multiCorrect++;
+    btns[correctIdx[0]].click();
+    ok(A.locked, `${cur.q.id} answered`);
+    A.nextQ(); n26++;
+  }
+  ok(A.S.done.includes(u.id), `${u.id} marked done`);
+}
+ok(n26 === 121, `all 121 CH26 questions answered (${n26})`);
+ok(multiCorrect === 0, 'every CH26 question has exactly one correct option');
+ok(['mcq', 'fill', 'tf', 'match', 'case', 'odd'].every(t => seen26.has(t)), `CH26 covers all 6 formats: ${[...seen26].sort().join(', ')}`);
+console.log('— after CH26'); ok(A.CHAPTERS.filter(c => c.live).length === 26, '26 live chapters after playthrough');
 
 console.log(fails ? `\n${fails} FAILURES` : '\nALL CHECKS PASSED ✓');
 process.exit(fails ? 1 : 0);

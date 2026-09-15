@@ -68,7 +68,7 @@ Haematology (50–52) · Miscellaneous (53–54).
 | 23 | Diarrheal Disorders in Children | 99 | 5 | ✅ DONE — 104 Q, 9 units |
 | 24 | Disorders of Liver in Children | 104 | 7 | ✅ DONE — 129 Q, 10 units |
 | 25 | Surgical GI Disorders in Children | 111 | 5 | ✅ DONE — 95 Q, 9 units |
-| 26 | Airway Malformations and Foreign Bodies | 116 | 4 | ⏳ |
+| 26 | Airway Malformations and Foreign Bodies | 116 | 4 | ✅ DONE — 121 Q, 9 units |
 | 27 | Asthma | 120 | 4 | ⏳ |
 | 28 | Respiratory Infections | 124 | 6 | ⏳ |
 | 29 | Cystic Fibrosis | 130 | 3 | ⏳ |
@@ -176,5 +176,18 @@ Page math: 258 content pages (2–259) + 1 cover = 259 PDF pages ✓
   - **CH25 Surgical GI Disorders (p111–115)** — 95 Q, 9 units U204–U212 (IHPS statue/clue + USG ≥4/≥16 + ½NS+K+5%D → Ramstedt + case, duodenal atresia 30% Down + double bubble + windsock + d-d-dostomy, atresia types/joint protocol/complications, intussusception triad + doughnut/claw + aerostat + 10–20% recurrence + case, malrotation/Ladd, Hirschsprung meconium>48h + RB + absent RAIR + AChE + pull-through, anorectal malformations, mesenteric cyst/omphalocele/gastroschisis, misc).
   - Quality passes: answer-key rotation (uniform ans distribution), match normalize + arrow-aware verify (85/85 correct), length-giveaway trim 67→18 flagged (worst chapter 8.2%), 100 clinical cases (4/chapter incl. CH21–25 inline), CH24 4th case (CN type I) inserted → 2541 Q.
   - Build: `validate.py` 2541 Q / 0 errors / 1 pre-existing warn (C5-038); `node --check` OK; `validate.js` ALL CHECKS PASSED (2541/25 live/"25 of 54" expectations updated). `build_app.py` reads only `ch*_data.py` — inline cases/odds merge-safe.
-- [ ] **NEXT: CH26 Airway Malformations and Foreign Bodies (p116–119)**
-- [ ] Pending in this book: CH26–CH54 (source PDFs already present in `source/chapters/`)
+- [x] **RESPIRATORY BATCH #1 — CH26 Airway Malformations and Foreign Bodies (p116–119): DONE** — 121 Q, 9 units (U213–U221), visually re-verified line-by-line against the 200 dpi renders (+ 350–400 dpi zooms on: onset "within 2 weeks/2 weeks after birth", resolution "6–12 months of age" (low-res read "4–5" corrected after zoom), table (positional variation / cry / stridor), "only 10–20% radiopaque", "5 back blows + 5 chest compressions"):
+  - **U213 Laryngomalacia — pathology & structures affected** (m/c congenital laryngeal malformation; malacia = softness/floppiness/laxity; supraglottic structures — epiglottis, arytenoids, aryepiglottic folds; 3 distinct "which of these is affected" items + match)
+  - **U214 Clinical manifestations (stridor)** (stridor = upper airway obstruction sign; floppy structures fall over the glottic opening; onset soon after birth/within 2 weeks; intermittent on crying/agitation/after feeding; postural variation supine +, prone −) + laryngomalacia case
+  - **U215 Laryngomalacia vs congenital subglottic stenosis** (table: positional variation + / −, cry muffled / normal, stridor inspiratory / biphasic) + subglottic-stenosis case
+  - **U216 Diagnosis & management** (laryngoscopy; omega Ω-shaped epiglottis; reassurance; resolves by 6–12 months) + management case
+  - **U217 Congenital lobar emphysema** (cartilaginous bronchial dysplasia → abnormal compliance → collapse on expiration = ball valve effect → air trapping → hyperinflation; LUL > RML; compression atelectasis → impaired oxygenation → respiratory distress; mediastinal shift to unaffected side; X-ray first-line, CT chest IOC; lobectomy) + odd-one-out
+  - **U218 CPAM** (hamartomatous/dysplastic tissue → multiple cysts; m/c cystic lung disease of newborn; non-functional cysts → no gaseous exchange → distress; ↑ infection → recurrent pneumonia; X-ray → CT IOC; ↑ risk of sarcoma/carcinoma → resection within 1 year) + case
+  - **U219 Pulmonary sequestration** (segregation of non-functioning lung, no bronchial communication; systemic supply from lower thoracic/abdominal aorta → ↑ recurrent infections; lower lobes; intrapulmonary = common pleura / extrapulmonary = separate pleura; X-ray → CT IOC; surgical resection) + odd-one-out
+  - **U220 Foreign bodies — intro & presentation** (paediatric emergency, < 3 years, lower > upper airway → m/c bronchus R>L; nuts/coins/small rounded plastic toys; immediate = choking, small child acute recurrent cough, older child choking sign = clutching of neck + gag response; caregiver h/o choking)
+  - **U221 Foreign bodies — delayed presentation, consequences, investigation & management** (retained FB → recurrent unexplained wheeze mimicking bronchodilator-unresponsive asthma; suppurative — same-site recurrent pneumonia → bronchiectasis, lung abscess; complete obstruction → collapse/atelectasis, partial → ball valve → hyperinflation; X-ray unreliable, only 10–20% radiopaque; act on suspicion triad; bronchus → rigid bronchoscope; > 1 year Heimlich (epigastric thrust backwards & upwards), < 1 year 5 back blows + 5 chest compressions) + FB case
+  - Format mix 65 MCQ · 30 fill · 9 T/F (5 T / 4 F) · 7 match · 6 odd · 4 clinical cases; answer-key rotation → uniform index distribution (28/28/28/28 non-TF); length-giveaway check clean; 4 authoring defects caught & fixed during review (2 option/answer-index mismatches, 2 odd-one-out keys, 1 duplicate IOC pair) + 6 fill-blank markers normalised to `___`
+  - Build: `validate.py` **2662 Q / 221 U / 26 chapters / 0 errors** (1 pre-existing warn C5-038); `node --check` on the extracted script OK; `validate.js` extended with a **full CH26 playthrough (all 121 Q across 9 units)** → ALL CHECKS PASSED
+- [x] App rebuilt: **2662 questions live (26 chapters, 221 units)** — home hero shows "26 of 54"
+- [ ] **NEXT: CH27 Asthma (p120–123)**
+- [ ] Pending in this book: CH27–CH54 (source PDFs already present in `source/chapters/`)
