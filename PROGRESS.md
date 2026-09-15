@@ -58,11 +58,11 @@ Haematology (50–52) · Miscellaneous (53–54).
 | 13 | Behavioural Disorders in Children | 54 | 4 | ✅ DONE — 79 Q, 8 units |
 | 14 | Breastfeeding | 58 | 4 | ✅ DONE — 62 Q, 8 units |
 | 15 | Malnutrition | 62 | 4 | ✅ DONE — 72 Q, 8 units |
-| 16 | Obesity | 66 | 3 | ⏳ |
-| 17 | Rickets and Scurvy | 69 | 5 | ⏳ |
-| 18 | Genetic Disorders | 74 | 6 | ⏳ |
-| 19 | Childhood Infections | 80 | 6 | ⏳ |
-| 20 | TORCH Infections | 86 | 6 | ⏳ |
+| 16 | Obesity | 66 | 3 | ✅ DONE — 77 Q, 7 units |
+| 17 | Rickets and Scurvy | 69 | 5 | ✅ DONE — 88 Q, 7 units |
+| 18 | Genetic Disorders | 74 | 6 | ✅ DONE — 102 Q, 8 units |
+| 19 | Childhood Infections | 80 | 6 | ✅ DONE — 108 Q, 8 units |
+| 20 | TORCH Infections | 86 | 6 | ✅ DONE — 83 Q, 8 units |
 | 21 | COVID-19 in Children | 92 | 3 | ⏳ |
 | 22 | Disorders of Oesophagus in Children | 95 | 4 | ⏳ |
 | 23 | Diarrheal Disorders in Children | 99 | 5 | ⏳ |
@@ -154,5 +154,12 @@ Page math: 258 content pages (2–259) + 1 cover = 259 PDF pages ✓
 - [x] **CH14 Breastfeeding (p58–61): DONE** — 62 Q, 8 units (latching, preterm feeding, properties HMO, composition, foremilk/hindmilk, deficiencies, contraindications, storage)
 - [x] **CH15 Malnutrition (p62–65): DONE** — 72 Q, 8 units (wasting/stunting, marasmus vs kwashiorkor, SAM home/hospital, Phase I stabilization)
 - [x] App rebuilt: **1410 questions live (15 chapters, 130 units)**, strict book order verified across all 15, full CH11-15 playthroughs passing
-- [ ] **NEXT: CH16 Fluid & Electrolytes (p66–)** → new chat after source re-upload
-- [ ] Pending in this book: CH16–CH54 (need source PDF re-shared for those)
+- [x] **CH1–6 data files restored** (ch1_data.py…ch6_data.py) — extracted from the committed 15-chapter build `pulse-peds-complete.html` (143+101+98+101+102+105 = 650 Q, refs + book order verified); they were missing from the workspace, which made the last rebuild drop them
+- [x] **CH16 Obesity (p66–68): DONE** — 77 Q, 7 units (definitions/BMI/skinfold/waist, etiology exogenous vs pathological, monogenic MC4R/leptin + endocrine, hypothalamic VMN/ROHHAD, syndromic PWS/BWS/LM-BB + drugs, complications, management lifestyle/orlistat/liraglutide/LAGB) — visually re-verified line-by-line against 300dpi renders
+- [x] **CH17 Rickets and Scurvy (p69–73): DONE** — 88 Q, 7 units (etiology, pathophysiology, head/chest/limb deformity, investigations + Vit D table + X-ray signs, treatment 2000/3000 IU + monitoring, refractory rickets incl. PHEX/phosphatonin + VDDR I/II + approach algorithm, scurvy) — visually re-verified line-by-line
+- [x] **CH18 Genetic Disorders (p74–79): DONE** — 102 Q, 8 units (aneuploidies, Down incl. pathogenesis 95/4/1 + features + associations + recurrence table, Edwards, Patau, Turner karyotype + features, Noonan table, Klinefelter, DiGeorge CATCH-22 + Williams, imprinting Prader-Willi, Angelman, Fragile X TRD) — visually re-verified line-by-line
+- [x] **CH19 Childhood Infections (p80–85): DONE** — 108 Q, 8 units (classification 1st–6th disease, measles + Koplik + SSPE + Vitamin A dosing, scarlet fever + Pastia's, rubella + Forchheimer, erythema infectiosum 3 stages + aplastic crisis, roseola + Nagayama, HFMD + onychomadesis, varicella + acyclovir + Oka vaccine + VZIG) — visually re-verified line-by-line
+- [x] **CH20 TORCH Infections (p86–91): DONE** — 83 Q, 8 units (TORCH general aspects, CRS triad + salt-and-pepper + blueberry muffin + PRP, CMV most common + periventricular calcification + ganciclovir, toxo triad + pyrimethamine-sulfadiazine-folinic + spiramycin, congenital/perinatal varicella, early/late syphilis + VDRL + penicillin G, Zika, parvovirus B19 hydrops) — visually re-verified line-by-line
+- [x] App rebuilt: **1868 questions live (20 chapters, 168 units)** — full data-integrity validation (unique ids, unit refs complete+ordered, strict book order all 20) + jsdom DOM simulation of the complete flow (home → 54 rows w/ locks → path → guide → full CH20 playthrough → unitdone score/XP/accuracy/review → localStorage persistence → next-unit unlock → CH1 playthrough) ALL PASSING
+- [ ] **NEXT: CH21 COVID-19 in Children (p92–94)**
+- [ ] Pending in this book: CH21–CH54 (source PDFs already present in `source/chapters/`)
