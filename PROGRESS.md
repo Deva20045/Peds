@@ -63,11 +63,11 @@ Haematology (50–52) · Miscellaneous (53–54).
 | 18 | Genetic Disorders | 74 | 6 | ✅ DONE — 102 Q, 8 units |
 | 19 | Childhood Infections | 80 | 6 | ✅ DONE — 108 Q, 8 units |
 | 20 | TORCH Infections | 86 | 6 | ✅ DONE — 83 Q, 8 units |
-| 21 | COVID-19 in Children | 92 | 3 | ⏳ |
-| 22 | Disorders of Oesophagus in Children | 95 | 4 | ⏳ |
-| 23 | Diarrheal Disorders in Children | 99 | 5 | ⏳ |
-| 24 | Disorders of Liver in Children | 104 | 7 | ⏳ |
-| 25 | Surgical GI Disorders in Children | 111 | 5 | ⏳ |
+| 21 | COVID-19 in Children | 92 | 3 | ✅ DONE — 82 Q, 8 units |
+| 22 | Disorders of Oesophagus in Children | 95 | 4 | ✅ DONE — 82 Q, 8 units |
+| 23 | Diarrheal Disorders in Children | 99 | 5 | ✅ DONE — 104 Q, 9 units |
+| 24 | Disorders of Liver in Children | 104 | 7 | ✅ DONE — 129 Q, 10 units |
+| 25 | Surgical GI Disorders in Children | 111 | 5 | ✅ DONE — 95 Q, 9 units |
 | 26 | Airway Malformations and Foreign Bodies | 116 | 4 | ⏳ |
 | 27 | Asthma | 120 | 4 | ⏳ |
 | 28 | Respiratory Infections | 124 | 6 | ⏳ |
@@ -168,5 +168,13 @@ Page math: 258 content pages (2–259) + 1 cover = 259 PDF pages ✓
   - **Hand-crafted banks**: `bank_cases.py` (80 clinical vignettes, 4/chapter, options same-category & similar length) + `bank_odd.py` (40 odd-one-outs, 2/chapter, exp names the shared property)
   - **Bank: 2049 Q** = 852 MCQ · 842 fill · 170 TF · 65 match · 80 case · 40 odd; ans-index distribution balanced; strict book order + unit refs + unique ids all validated (`validate.py`, 0 errors) and full DOM flow re-simulated (`validate.js`, 118 checks pass)
   - Pipeline: restore git originals → `python3 audit.py` → `python3 validate.py` → `python3 build_app.py` → `node validate.js`
-- [ ] **NEXT: CH21 COVID-19 in Children (p92–94)**
-- [ ] Pending in this book: CH21–CH54 (source PDFs already present in `source/chapters/`)
+- [x] **GI/COVID batch CH21–CH25 (p92–115): DONE** — 492 questions, 45 units (U169–U212):
+  - **CH21 COVID-19 in Children (p92–94)** — 82 Q, 8 units U169–U176 (virus/variants & transmission, clinical spectrum mild–severe + MIS-C, danger signs & tachypnea 60/50/40/30 + SpO2 90–93/<90, diagnosis RT-PCR/CT, mild & moderate management + O2 94–96%, severe/critical + dexa 0.15–6 mg/kg + remdesivir, PIMS-TS/IVIG 2 g/kg + MP 2 mg/kg/d, prevention & vaccines, COVID case). Defect fixed: dexa dose zoom-verified 0.15–6 mg/kg (was 0.15–0.6).
+  - **CH22 Disorders of Oesophagus (p95–98)** — 82 Q, 8 units U177–U184 (dysphagia causes, EA/TEF types & C-penta + coiled NG, EA management & complications, GERD physiology & red flags, GERD management + Nissen, achalasia + manometry, caustic/corrosive ingestion & Zargar, FB ingestion batteries/magnets + esophageal FB case). C22-046 redesigned semantically (Sandifer→BIND pairs).
+  - **CH23 Diarrheal Disorders (p99–103)** — 104 Q, 9 units U185–U193 (classification acute/persistent/chronic, ORS 245 mosm composition, Plan A/B/C, ORS-modify & contraindications, AD management zinc 14 d + Vit A + ondansetron 0.15, persistent diarrhea 5 rules, celiac criteria/anti-tTG/serology-first, osmotic vs secretory, celiac-biopsy clinical case). Celiac biopsy IOC case appended as C23-104.
+  - **CH24 Disorders of Liver (p104–110)** — 129 Q, 10 units U194–U203 (bilirubin metabolism, hyperbilirubinemias table + CN I/II cases, cholestasis conj ≥1/≥20% + approach, EHBA vs neonatal hepatitis + Kasai <60 d + HIDA + transplant, metabolic Wilson ATP7B/Cp/biopsy Cu>250 + DPA/knock-knees, autoimmune/PSC/UDCA, portal HTN & BCS, hepatic failure/encephalopathy + PELD, Wilson disease 20 Q U202, GSD table 20 Q U203 + cases CN-I & IHPS). C24-127 page→110 (validated).
+  - **CH25 Surgical GI Disorders (p111–115)** — 95 Q, 9 units U204–U212 (IHPS statue/clue + USG ≥4/≥16 + ½NS+K+5%D → Ramstedt + case, duodenal atresia 30% Down + double bubble + windsock + d-d-dostomy, atresia types/joint protocol/complications, intussusception triad + doughnut/claw + aerostat + 10–20% recurrence + case, malrotation/Ladd, Hirschsprung meconium>48h + RB + absent RAIR + AChE + pull-through, anorectal malformations, mesenteric cyst/omphalocele/gastroschisis, misc).
+  - Quality passes: answer-key rotation (uniform ans distribution), match normalize + arrow-aware verify (85/85 correct), length-giveaway trim 67→18 flagged (worst chapter 8.2%), 100 clinical cases (4/chapter incl. CH21–25 inline), CH24 4th case (CN type I) inserted → 2541 Q.
+  - Build: `validate.py` 2541 Q / 0 errors / 1 pre-existing warn (C5-038); `node --check` OK; `validate.js` ALL CHECKS PASSED (2541/25 live/"25 of 54" expectations updated). `build_app.py` reads only `ch*_data.py` — inline cases/odds merge-safe.
+- [ ] **NEXT: CH26 Airway Malformations and Foreign Bodies (p116–119)**
+- [ ] Pending in this book: CH26–CH54 (source PDFs already present in `source/chapters/`)

@@ -66,9 +66,9 @@ const ok = (cond, msg) => { console.log((cond ? '  ✓ ' : '  ✗ FAIL ') + msg)
 
 /* ---------------- 1. boot / home ---------------- */
 console.log('— boot & home');
-ok(A.QUESTIONS.length === 2049, `QUESTIONS loaded (${A.QUESTIONS.length})`);
-ok(A.CHAPTERS.filter(c => c.live).length === 20, '20 live chapters');
-ok($('heroSub').textContent.includes('20 of 54'), 'home hero shows "20 of 54"');
+ok(A.QUESTIONS.length === 2541, `QUESTIONS loaded (${A.QUESTIONS.length})`);
+ok(A.CHAPTERS.filter(c => c.live).length === 25, '25 live chapters');
+ok($('heroSub').textContent.includes('25 of 54'), 'home hero shows "25 of 54"');
 
 /* ---------------- 2. chapters list ---------------- */
 console.log('— chapters');
