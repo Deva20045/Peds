@@ -3,7 +3,7 @@
 Live app: **https://deva20045.github.io/Peds/**
 
 - Single-HTML, offline, no dependencies
-- **2049 questions · 168 units · 20 chapters live (CH1–CH20)**
+- **2541 questions · 212 units · 25 chapters live (CH1–CH25)**
 - Build: `python3 build_app.py` → `pulse-peds-complete.html` + `index.html`
 - Storage keys `pulse_peds_*` (independent from ORTHO)
 
@@ -12,16 +12,16 @@ Every unit now mixes **six formats** — no more single-format drilling:
 
 | Format | Badge | Count | What it is |
 |---|---|---|---|
-| MCQ | MCQ | 852 | Single-best-answer with same-category, length-balanced options |
-| Fill-up | FILL UP | 842 | Blank (___) completion — definitions, milestones, table rows |
-| True / False | TRUE / FALSE | 170 | Statement judged true or subtly false (~50/50, keyboard T/F) |
-| Match the following | MATCH | 65 | Column A ↔ deranged Column B; pick the correct combination |
-| Clinical case | CLINICAL | 80 | Hand-written patient vignette → diagnosis / next step |
-| Odd one out | ODD ONE OUT | 40 | Three share a property, one doesn't (exp names the property) |
+| MCQ | MCQ | 1128 | Single-best-answer with same-category, length-balanced options |
+| Fill-up | FILL UP | 968 | Blank (___) completion — definitions, milestones, table rows |
+| True / False | TRUE / FALSE | 210 | Statement judged true or subtly false (~50/50, keyboard T/F) |
+| Match the following | MATCH | 85 | Column A ↔ deranged Column B; pick the correct combination |
+| Clinical case | CLINICAL | 100 | Hand-written patient vignette → diagnosis / next step |
+| Odd one out | ODD ONE OUT | 50 | Three share a property, one doesn't (exp names the property) |
 
 Options shuffle every run; the correct answer's position is also randomised in the data.
 
-## Anti-predictability rules (applied by `audit.py` to all 20 chapters)
+## Anti-predictability rules (applied by `audit.py` to all 25 chapters)
 - **Length-giveaway eliminated**: 46.9% → 10.3% of questions had a correct option >1.6× longer than every distractor (now trimmed, detail moved to the explanation, or distractors enriched with real same-section values)
 - **546 junk distractors removed** ("Surgery", "Observation only", "Only heart", "Normal X-ray"…) — replaced with real confusable values mined from the same book section
 - **Same-section distractor pool only** — replacements keep the option category (drugs vs drugs, ages vs ages)
@@ -59,5 +59,10 @@ Options shuffle every run; the correct answer's position is also randomised in t
 | 18 | Genetic Disorders (p74–79) | 112 | 8 | 69·23·10·4·4·2 |
 | 19 | Childhood Infections (p80–85) | 119 | 8 | 67·29·12·5·4·2 |
 | 20 | TORCH Infections (p86–91) | 94 | 8 | 55·19·9·5·4·2 |
+| 21 | COVID-19 in Children (p92–94) | 82 | 8 | 43·19·9·5·4·2 |
+| 22 | Disorders of Oesophagus in Children (p95–98) | 82 | 8 | 41·24·9·2·4·2 |
+| 23 | Diarrheal Disorders in Children (p99–103) | 104 | 9 | 56·29·8·5·4·2 |
+| 24 | Disorders of Liver in Children (p104–110) | 129 | 10 | 82·29·7·5·4·2 |
+| 25 | Surgical GI Disorders in Children (p111–115) | 95 | 9 | 54·25·7·3·4·2 |
 
-Next: CH21 COVID-19 in Children (p92–94)
+Next: CH26 Airway Malformations and Foreign Bodies (p116–119)
