@@ -3,7 +3,7 @@
 Live app: **https://deva20045.github.io/Peds/**
 
 - Single-HTML, offline, no dependencies
-- **4956 questions · 362 units · 45 chapters live (CH1–CH45)**
+- **5729 questions · 403 units · 50 chapters live (CH1–CH50)**
 - Build: `python3 build_app.py` → `pulse-peds-complete.html` + `index.html`
 - Storage keys `pulse_peds_*` (independent from ORTHO)
 
@@ -12,16 +12,22 @@ Every unit now mixes **six formats** — no more single-format drilling:
 
 | Format | Badge | Count | What it is |
 |---|---|---|---|
-| MCQ | MCQ | 1832 | Single-best-answer with same-category, length-balanced options |
-| Fill-up | FILL UP | 1158 | Blank (___) completion — definitions, milestones, table rows |
-| True / False | TRUE / FALSE | 318 | Statement judged true or subtly false (~50/50, keyboard T/F) |
-| Match the following | MATCH | 147 | Column A ↔ deranged Column B; pick the correct combination |
-| Clinical case | CLINICAL | 158 | Hand-written patient vignette → diagnosis / next step |
-| Odd one out | ODD ONE OUT | 98 | Three share a property, one doesn't (exp names the property) |
+| MCQ | MCQ | 3094 | Single-best-answer with same-category, length-balanced options |
+| Fill-up | FILL UP | 1439 | Blank (___) completion — definitions, milestones, table rows |
+| True / False | TRUE / FALSE | 467 | Statement judged true or subtly false (257 T / 210 F, keyboard T/F) |
+| Match the following | MATCH | 256 | Column A ↔ deranged Column B; pick the correct combination |
+| Clinical case | CLINICAL | 288 | Hand-written patient vignette → diagnosis / next step |
+| Odd one out | ODD ONE OUT | 185 | Three share a property, one doesn't (exp names the property) |
 
 Options shuffle every run; the correct answer's position is also randomised in the data.
 
-## Anti-predictability rules (applied to all 42 live chapters)
+## Match-question integrity (Sep 2026 full-bank repair)
+Every one of the 256 match questions was re-derived from its explanation and rewritten
+(auto-detect + hand repair) so that **the marked "correct" mapping is always the semantically
+true pairing** — earlier auto-generated matches had a shuffled key against the prose pairs.
+A permanent checker re-verifies this on every build.
+
+## Anti-predictability rules (applied to all 50 live chapters)
 - **Length-giveaway eliminated**: 46.9% → 10.3% of questions had a correct option >1.6× longer than every distractor (now trimmed, detail moved to the explanation, or distractors enriched with real same-section values)
 - **546 junk distractors removed** ("Surgery", "Observation only", "Only heart", "Normal X-ray"…) — replaced with real confusable values mined from the same book section
 - **Same-section distractor pool only** — replacements keep the option category (drugs vs drugs, ages vs ages)
@@ -84,5 +90,10 @@ Options shuffle every run; the correct answer's position is also randomised in t
 | 43 | Growth Hormone Deficiency & Hypothyroidism (p199–203) | 146 | 6 | 102·15·9·6·8·6 |
 | 44 | Adrenal Disorders (p204–208) | 162 | 8 | 109·16·13·9·10·5 |
 | 45 | Pubertal Disorders (p209–212) | 116 | 6 | 74·12·11·7·8·4 |
+| 46 | Diabetic Ketoacidosis (p213–214) | 78 | 5 | 26·19·13·5·10·5 |
+| 47 | Haematological Malignancies (p215–222) | 241 | 15 | 100·60·24·19·23·15 |
+| 48 | Solid Tumours in Children (p223–226) | 115 | 4 | 56·30·9·7·8·5 |
+| 49 | Rheumatic Disorders of Childhood (p227–234) | 189 | 9 | 111·26·17·10·16·9 |
+| 50 | Approach to Anaemia & Nutritional Anaemia (p235–240) | 150 | 8 | 64·45·15·8·10·8 |
 
-Next: CH46 (p213–) — first chapter of the final section
+Next: CH51 (p241–247) — Congenital Haemolytic Anaemia

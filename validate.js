@@ -294,5 +294,37 @@ for (const ch of Object.keys(NEW_CH)) {
 }
 console.log('— after CH29–CH42'); ok(A.CHAPTERS.filter(c => c.live).length === LIVE, 'live chapter count unchanged after batch playthroughs');
 
+/* ---------------- 10. full CH46–CH50 playthroughs (Endocrine tail + Malignancies + Rheumatology + Haematology) ---------------- */
+const NEW_CH2 = { 46: [5, 78], 47: [15, 241], 48: [4, 115], 49: [9, 189], 50: [8, 150] };
+for (const ch of Object.keys(NEW_CH2)) {
+  const [uN, qN] = NEW_CH2[ch];
+  const cu = A.unitsOf(+ch);
+  ok(cu.length === uN, `CH${ch} has ${uN} units (${cu.length})`);
+  const qTotal = cu.reduce((n, u) => n + u.qs.length, 0);
+  ok(qTotal === qN, `CH${ch} has ${qN} questions (${qTotal})`);
+  const seen = new Set();
+  let played = 0, multi = 0;
+  for (const u of cu) {
+    A.openGuide(u);
+    ok($('gTitle').textContent === u.title && $('gCount').textContent.startsWith(u.qs.length + ' questions'), `guide renders for ${u.id}`);
+    A.beginUnit();
+    ok(A.order.length === u.qs.length, `${u.id}: ${A.order.length} questions in book order`);
+    while (A.order[A.idx]) {
+      const cur = A.order[A.idx];
+      seen.add(cur.q.type || 'mcq');
+      const btns = $('opts').children;
+      const ci = btns.map((b, i) => (cur.opts[i] && cur.opts[i].ok) ? i : -1).filter(i => i >= 0);
+      if (ci.length !== 1) multi++;
+      btns[ci[0]].click();
+      A.nextQ(); played++;
+    }
+    ok(A.S.done.includes(u.id), `${u.id} marked done`);
+  }
+  ok(played === qN, `all ${qN} CH${ch} questions answered (${played})`);
+  ok(multi === 0, `every CH${ch} question has exactly one correct option`);
+  ok(['mcq', 'fill', 'tf', 'match', 'case', 'odd'].every(t => seen.has(t)), `CH${ch} covers all 6 formats: ${[...seen].sort().join(', ')}`);
+}
+console.log('— after CH46–CH50'); ok(A.CHAPTERS.filter(c => c.live).length === LIVE, 'live chapter count unchanged after the CH46–CH50 playthroughs');
+
 console.log(fails ? `\n${fails} FAILURES` : '\nALL CHECKS PASSED ✓');
 process.exit(fails ? 1 : 0);
