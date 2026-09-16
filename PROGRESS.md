@@ -70,7 +70,7 @@ Haematology (50–52) · Miscellaneous (53–54).
 | 25 | Surgical GI Disorders in Children | 111 | 5 | ✅ DONE — 95 Q, 9 units |
 | 26 | Airway Malformations and Foreign Bodies | 116 | 4 | ✅ DONE — 121 Q, 9 units |
 | 27 | Asthma | 120 | 4 | ✅ DONE — 141 Q, 10 units |
-| 28 | Respiratory Infections | 124 | 6 | ⏳ |
+| 28 | Respiratory Infections | 124 | 6 | ✅ DONE — 140 Q, 13 units |
 | 29 | Cystic Fibrosis | 130 | 3 | ⏳ |
 | 30 | Fetal Circulation and Introduction to Congenital Heart Diseases | 133 | 3 | ⏳ |
 | 31 | Acyanotic Congenital Heart Defects | 136 | 6 | ⏳ |
