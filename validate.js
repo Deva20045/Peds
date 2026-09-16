@@ -66,9 +66,10 @@ const ok = (cond, msg) => { console.log((cond ? '  ✓ ' : '  ✗ FAIL ') + msg)
 
 /* ---------------- 1. boot / home ---------------- */
 console.log('— boot & home');
-ok(A.QUESTIONS.length === 2803, `QUESTIONS loaded (${A.QUESTIONS.length})`);
-ok(A.CHAPTERS.filter(c => c.live).length === 27, '27 live chapters');
-ok($('heroSub').textContent.includes('27 of 54'), 'home hero shows "27 of 54"');
+const LIVE = A.CHAPTERS.filter(c => c.live).length;
+ok(A.QUESTIONS.length === A.UNITS.reduce((n, u) => n + u.qs.length, 0), `QUESTIONS loaded & fully unit-referenced (${A.QUESTIONS.length})`);
+ok(LIVE >= 28 && A.CHAPTERS.filter(c => c.live).every((c, i) => c.n === i + 1), `${LIVE} live chapters, contiguous from 1`);
+ok($('heroSub').textContent.includes(LIVE + ' of 54'), `home hero shows "${LIVE} of 54"`);
 
 /* ---------------- 2. chapters list ---------------- */
 console.log('— chapters');
@@ -206,7 +207,7 @@ for (const u of ch26u) {
 ok(n26 === 121, `all 121 CH26 questions answered (${n26})`);
 ok(multiCorrect === 0, 'every CH26 question has exactly one correct option');
 ok(['mcq', 'fill', 'tf', 'match', 'case', 'odd'].every(t => seen26.has(t)), `CH26 covers all 6 formats: ${[...seen26].sort().join(', ')}`);
-console.log('— after CH26'); ok(A.CHAPTERS.filter(c => c.live).length === 27, '27 live chapters after playthrough');
+console.log('— after CH26'); ok(A.CHAPTERS.filter(c => c.live).length === LIVE, 'live chapter count unchanged after playthrough');
 
 /* ---------------- 7. full CH27 playthrough (Asthma) ---------------- */
 console.log('— full CH27 playthrough (141 Q / 10 units)');
@@ -233,6 +234,33 @@ for (const u of ch27u) {
 ok(n27 === 141, `all 141 CH27 questions answered (${n27})`);
 ok(multi27 === 0, 'every CH27 question has exactly one correct option');
 ok(['mcq', 'fill', 'tf', 'match', 'case', 'odd'].every(t => seen27.has(t)), `CH27 covers all 6 formats: ${[...seen27].sort().join(', ')}`);
+
+/* ---------------- 8. full CH28 playthrough (Respiratory Infections) ---------------- */
+console.log('— full CH28 playthrough (Respiratory Infections)');
+const ch28u = A.unitsOf(28);
+ok(ch28u.length === 13, `CH28 has 13 units (${ch28u.length})`);
+const q28 = ch28u.reduce((n, u) => n + u.qs.length, 0);
+ok(q28 === 140, `CH28 has 140 questions (${q28})`);
+const seen28 = new Set();
+let n28 = 0, multi28 = 0;
+for (const u of ch28u) {
+  A.openGuide(u);
+  ok($('gTitle').textContent === u.title && $('gCount').textContent.startsWith(u.qs.length + ' questions'), `guide renders for ${u.id}`);
+  A.beginUnit();
+  ok(A.order.length === u.qs.length, `${u.id}: ${A.order.length} questions in book order`);
+  while (A.order[A.idx]) {
+    const cur = A.order[A.idx];
+    seen28.add(cur.q.type || 'mcq');
+    const btns = $('opts').children;
+    const ci = btns.map((b, i) => (cur.opts[i] && cur.opts[i].ok) ? i : -1).filter(i => i >= 0);
+    if (ci.length !== 1) multi28++;
+    btns[ci[0]].click();
+    A.nextQ(); n28++;
+  }
+}
+ok(n28 === q28, `all ${q28} CH28 questions answered (${n28})`);
+ok(multi28 === 0, 'every CH28 question has exactly one correct option');
+ok(['mcq', 'fill', 'tf', 'match', 'case', 'odd'].every(t => seen28.has(t)), `CH28 covers all 6 formats: ${[...seen28].sort().join(', ')}`);
 
 console.log(fails ? `\n${fails} FAILURES` : '\nALL CHECKS PASSED ✓');
 process.exit(fails ? 1 : 0);

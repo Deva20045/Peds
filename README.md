@@ -3,7 +3,7 @@
 Live app: **https://deva20045.github.io/Peds/**
 
 - Single-HTML, offline, no dependencies
-- **2541 questions · 212 units · 25 chapters live (CH1–CH25)**
+- **2943 questions · 244 units · 28 chapters live (CH1–CH28)**
 - Build: `python3 build_app.py` → `pulse-peds-complete.html` + `index.html`
 - Storage keys `pulse_peds_*` (independent from ORTHO)
 
@@ -12,12 +12,12 @@ Every unit now mixes **six formats** — no more single-format drilling:
 
 | Format | Badge | Count | What it is |
 |---|---|---|---|
-| MCQ | MCQ | 1128 | Single-best-answer with same-category, length-balanced options |
-| Fill-up | FILL UP | 968 | Blank (___) completion — definitions, milestones, table rows |
-| True / False | TRUE / FALSE | 210 | Statement judged true or subtly false (~50/50, keyboard T/F) |
-| Match the following | MATCH | 85 | Column A ↔ deranged Column B; pick the correct combination |
-| Clinical case | CLINICAL | 100 | Hand-written patient vignette → diagnosis / next step |
-| Odd one out | ODD ONE OUT | 50 | Three share a property, one doesn't (exp names the property) |
+| MCQ | MCQ | 1311 | Single-best-answer with same-category, length-balanced options |
+| Fill-up | FILL UP | 1075 | Blank (___) completion — definitions, milestones, table rows |
+| True / False | TRUE / FALSE | 257 | Statement judged true or subtly false (~50/50, keyboard T/F) |
+| Match the following | MATCH | 107 | Column A ↔ deranged Column B; pick the correct combination |
+| Clinical case | CLINICAL | 120 | Hand-written patient vignette → diagnosis / next step |
+| Odd one out | ODD ONE OUT | 73 | Three share a property, one doesn't (exp names the property) |
 
 Options shuffle every run; the correct answer's position is also randomised in the data.
 
@@ -64,5 +64,8 @@ Options shuffle every run; the correct answer's position is also randomised in t
 | 23 | Diarrheal Disorders in Children (p99–103) | 104 | 9 | 56·29·8·5·4·2 |
 | 24 | Disorders of Liver in Children (p104–110) | 129 | 10 | 82·29·7·5·4·2 |
 | 25 | Surgical GI Disorders in Children (p111–115) | 95 | 9 | 54·25·7·3·4·2 |
+| 26 | Airway Malformations & Foreign Bodies (p116–119) | 121 | 9 | 65·30·9·7·4·6 |
+| 27 | Asthma (p120–123) | 141 | 10 | 69·35·17·7·6·7 |
+| 28 | Respiratory Infections (p124–128) | 140 | 13 | 49·42·21·8·10·10 |
 
-Next: CH26 Airway Malformations and Foreign Bodies (p116–119)
+Next: CH29 Cystic Fibrosis (p130–132)
