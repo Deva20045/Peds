@@ -87,12 +87,12 @@ Haematology (50–52) · Miscellaneous (53–54).
 | 42 | Neuromuscular Disorders | 194 | 5 | ✅ DONE — 139 Q, 6 units |
 | 43 | Growth Hormone Deficiency and Hypothyroidism | 199 | 5 | ⏳ |
 | 44 | Adrenal Disorders in Children | 204 | 5 | ⏳ |
-| 45 | Pubertal Disorders | 209 | 4 | ⏳ |
-| 46 | Diabetic Ketoacidosis | 213 | 2 | ⏳ |
-| 47 | Haematological Malignancies | 215 | 8 | ⏳ |
-| 48 | Solid Tumours in Children | 223 | 4 | ⏳ |
-| 49 | Rheumatic Disorders of Childhood | 227 | 8 | ⏳ |
-| 50 | Approach to Anaemia in Children and Nutritional Anaemia | 235 | 6 | ⏳ |
+| 45 | Pubertal Disorders | 209 | 4 | ✅ DONE — 116 Q, 6 units |
+| 46 | Diabetic Ketoacidosis | 213 | 2 | ✅ DONE — 78 Q, 5 units |
+| 47 | Haematological Malignancies | 215 | 8 | ✅ DONE — 241 Q, 15 units |
+| 48 | Solid Tumours in Children | 223 | 4 | ✅ DONE — 115 Q, 4 units |
+| 49 | Rheumatic Disorders of Childhood | 227 | 8 | ✅ DONE — 189 Q, 9 units |
+| 50 | Approach to Anaemia & Nutritional Anaemia | 235 | 6 | ✅ DONE — 150 Q, 8 units |
 | 51 | Congenital Haemolytic Anaemia | 241 | 7 | ⏳ |
 | 52 | Bleeding Disorders | 248 | 5 | ⏳ |
 | 53 | Paediatric Resuscitation | 253 | 3 | ⏳ |
@@ -218,6 +218,14 @@ Page math: 258 content pages (2–259) + 1 cover = 259 PDF pages ✓
   - **CH44 Adrenal Disorders** — 162 Q, 8 units: adrenal zones/steroidogenesis/StAR; Cushing etiology, clinical features, investigations & treatment (24h UFC, low/high-dose DST, ACTH tiers, surgical/medical adrenalectomy); CAH basis & pathophysiology; 21-OH deficiency (salt-wasting, virilisation, hyperpigmentation, 17-OHP, hydrocortisone/fludrocortisone, stress dosing, clitoroplasty 2–6 months); 11-β-OH deficiency (DOC → HTN); 17-α-OH & 3-β-HSD deficiency + the salt-wasting/HTN × androgen pointer table. 109 MCQ · 16 fill-ups · 13 T/F · 9 match · 10 clinical cases · 5 odd-one-out.
   - **CH45 Pubertal Disorders** — 116 Q, 6 units: puberty basics & delayed puberty definition/central causes (constitutional delay m/c; Kallmann, Prader-Willi, Bardet-Biedl, CNS injury); peripheral causes & androgen insensitivity syndrome (AR gene, XLR, 46 XY, phenotypic female, absent uterus, inguinal testis); AIS puberty & management (ethinylestradiol > 12 y, progesterone 2 y later, testosterone; early dosing → short stature); precocious puberty definition & etiology (< 8 y girls / < 9.5 y boys; idiopathic m/c girls, CNS m/c boys; hypothalamic hamartoma + gelastic seizures; Leydig/Sertoli tumours, autonomous ovarian cyst, CAH); McCune-Albright (GNAS1 gain-of-function, Gs α-subunit; café-au-lait Coast of Maine not crossing midline vs NF-1 Coast of California; polyostotic fibrous dysplasia, Shepherd crook); treatment (letrozole for MAS, long-acting GnRH analogue leuprolide → pituitary desensitisation for central PP). 74 MCQ · 12 fill-ups · 11 T/F · 7 match · 8 clinical cases · 4 odd-one-out.
   - **Quality gates:** 424 source-grounded new questions; every chapter contains all six formats; non-obvious same-section distractors; match columns deranged; all 4-option answer keys rotated before app-level shuffling (CH44 37/37/38/37, CH45 28/27/25/25); 0 predictable-position keys. `validate.py`: **4956 Q / 362 units / 45 files / 0 errors / 0 warnings**. `node --check`: pass. `validate.js`: live chapter count + full checks — **ALL CHECKS PASSED**.
-- [x] App rebuilt: **4956 questions live (45 chapters, 362 units)** — home hero shows "45 of 54"
-- [ ] **NEXT: CH46 (p213–) — first chapter of the final section**
-- [ ] Pending in this book: CH46–CH54 (source PDFs already present in `source/chapters/`)
+- [x] **FINAL SECTION BATCH — CH46–CH50 (p213–240): DONE** — 773 source-grounded questions, 41 units:
+  - **CH46 Diabetic Ketoacidosis (p213–214)** — 78 Q, 5 units (definition/diagnosis, pathophysiology of ketogenesis & dehydration, clinical features + Kussmaul, fluids/insulin/potassium & cerebral edema, complications).
+  - **CH47 Haematological Malignancies (p215–222)** — 241 Q, 15 units (leukaemia intro, ALL incidence/risk, immunophenotype, features, diagnosis/prognosis, four-phase treatment + MRD; AML FAB M0–M7/WHO risk/features/treatment with ATRA for M3; Hodgkin epidemiology & CD types with Reed-Sternberg owl-eye vs popcorn cells, Ann Arbor staging, ABVD/IFRT; NHL including endemic vs sporadic Burkitt and St Jude staging; LCH spectrum from eosinophilic granuloma → Letterer-Siwe with CD1a, Birbeck granules and treatment).
+  - **CH48 Solid Tumours in Children (p223–226)** — 115 Q, 4 units (neuroblastoma origin/pathology/Homer-Wright rosettes, paraneoplastic syndromes, VMA/HVA & NSE, MIBG, INSS staging & risk genetics (N-myc, hypodiploidy vs hyperdiploidy, TRK A); Wilms tumour nephrogenic rest, WAGR/Denys-Drash/Beckwith-Wiedemann syndromes, COG post-surgical staging and stage-wise surgery/chemotherapy schedules).
+  - **CH49 Rheumatic Disorders of Childhood (p227–234)** — 189 Q, 9 units (JDM pathogenesis, Gottron/Heliotrope/shawl signs, diagnosis criteria and anti-Mi-2/anti-TNF antibodies; JIA definition and all five subtypes incl. polyarticular RF tables, systemic JIA quotidian fever/Koebner, MAS with low ESR, psoriatic dactylitis and HLA-B27 enthesitis; HSP — leukocytoclastic vasculitis, diagnostic criteria and renal follow-up; Kawasaki — CREAM, three stages vs coronary aneurysm, atypical criteria, IVIG + aspirin tapering).
+  - **CH50 Approach to Anaemia & Nutritional Anaemia (p235–240)** — 150 Q, 8 units (WHO cut-offs, nomograms; history/age-of-onset and diet clues; examination; MCV + corrected reticulocyte algorithms; IDA pathogenesis/features/treatment with the day-by-day response table; megaloblastic anaemia B12 vs folate causes, SACD and hypersegmented neutrophils, treatment rules).
+  - **Bank-wide match-question repair (all 256 match Qs):** automated detection + hand-authored rebuilds so the marked key always matches the explanation ('Correct pairs') — verified by a permanent checker: **0 mismatches**.
+  - **Quality gates:** every new chapter contains all six formats with rotated keys (CH46 15/18/17/15, CH47 51/56/55/55, CH48 22/30/27/27, CH49 40/44/42/46, CH50 34/32/34/35); no length-giveaway options; TF statements balanced (bank 257 True / 210 False). `validate.py`: **5729 Q / 403 units / 50 files / 0 errors / 0 warnings**. `node --check`: pass. `validate.js`: full CH1→CH26 + CH27 + CH28 + CH29–CH42 + CH46–CH50 unit-by-unit playthroughs, exactly one correct rendered option per question, keyboard T/F, local storage, 50 live chapters — **ALL CHECKS PASSED (842 assertions)**.
+- [x] App rebuilt: **5729 questions live (50 chapters, 403 units)** — home hero shows "50 of 54"; next batch is CH51–CH54 (p241–254)
+- [ ] **NEXT: CH51 Congenital Haemolytic Anaemia (p241–247)**
+- [ ] Pending in this book: CH51–CH54 (source PDFs already present in `source/chapters/`)
