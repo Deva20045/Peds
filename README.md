@@ -3,7 +3,7 @@
 Live app: **https://deva20045.github.io/Peds/**
 
 - Single-HTML, offline, no dependencies
-- **4532 questions · 342 units · 42 chapters live (CH1–CH42)**
+- **4956 questions · 362 units · 45 chapters live (CH1–CH45)**
 - Build: `python3 build_app.py` → `pulse-peds-complete.html` + `index.html`
 - Storage keys `pulse_peds_*` (independent from ORTHO)
 
@@ -81,5 +81,8 @@ Options shuffle every run; the correct answer's position is also randomised in t
 | 40 | Seizure Disorders (p181–186) | 135 | 6 | 105·7·6·6·6·5 |
 | 41 | Cerebral Palsy & CNS Infections (p187–193) | 169 | 7 | 135·7·7·7·7·6 |
 | 42 | Neuromuscular Disorders (p194–198) | 139 | 6 | 112·3·6·6·6·6 |
+| 43 | Growth Hormone Deficiency & Hypothyroidism (p199–203) | 146 | 6 | 102·15·9·6·8·6 |
+| 44 | Adrenal Disorders (p204–208) | 162 | 8 | 109·16·13·9·10·5 |
+| 45 | Pubertal Disorders (p209–212) | 116 | 6 | 74·12·11·7·8·4 |
 
-Next: CH43 Growth Hormone Deficiency and Hypothyroidism (p199–203)
+Next: CH46 (p213–) — first chapter of the final section
