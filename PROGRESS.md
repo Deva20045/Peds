@@ -71,13 +71,13 @@ Haematology (50–52) · Miscellaneous (53–54).
 | 26 | Airway Malformations and Foreign Bodies | 116 | 4 | ✅ DONE — 121 Q, 9 units |
 | 27 | Asthma | 120 | 4 | ✅ DONE — 141 Q, 10 units |
 | 28 | Respiratory Infections | 124 | 6 | ✅ DONE — 140 Q, 13 units |
-| 29 | Cystic Fibrosis | 130 | 3 | ⏳ |
-| 30 | Fetal Circulation and Introduction to Congenital Heart Diseases | 133 | 3 | ⏳ |
-| 31 | Acyanotic Congenital Heart Defects | 136 | 6 | ⏳ |
-| 32 | Cyanotic Congenital Heart Defects | 142 | 7 | ⏳ |
-| 33 | Acute Rheumatic Fever | 149 | 4 | ⏳ |
-| 34 | Congenital Anomalies of Kidney and Urinary Tract | 153 | 4 | ⏳ |
-| 35 | Nephrotic and Nephritic Syndrome | 157 | 5 | ⏳ |
+| 29 | Cystic Fibrosis | 130 | 3 | ✅ DONE — 88 Q, 6 units |
+| 30 | Fetal Circulation and Introduction to Congenital Heart Diseases | 133 | 3 | ✅ DONE — 71 Q, 6 units |
+| 31 | Acyanotic Congenital Heart Defects | 136 | 6 | ✅ DONE — 149 Q, 10 units |
+| 32 | Cyanotic Congenital Heart Defects | 142 | 7 | ✅ DONE — 143 Q, 11 units |
+| 33 | Acute Rheumatic Fever | 149 | 4 | ✅ DONE — 110 Q, 9 units |
+| 34 | Congenital Anomalies of Kidney and Urinary Tract | 153 | 4 | ✅ DONE — 93 Q, 8 units |
+| 35 | Nephrotic and Nephritic Syndrome | 157 | 5 | ✅ DONE — 114 Q, 9 units |
 | 36 | Inherited Tubular Disorders | 162 | 4 | ⏳ |
 | 37 | Acute Kidney Injury and Chronic Kidney Disease | 166 | 5 | ⏳ |
 | 38 | UR and UTI Management Guidelines | 171 | 4 | ⏳ |

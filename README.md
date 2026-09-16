@@ -3,7 +3,7 @@
 Live app: **https://deva20045.github.io/Peds/**
 
 - Single-HTML, offline, no dependencies
-- **2943 questions · 244 units · 28 chapters live (CH1–CH28)**
+- **3711 questions · 303 units · 35 chapters live (CH1–CH35)**
 - Build: `python3 build_app.py` → `pulse-peds-complete.html` + `index.html`
 - Storage keys `pulse_peds_*` (independent from ORTHO)
 
@@ -12,16 +12,16 @@ Every unit now mixes **six formats** — no more single-format drilling:
 
 | Format | Badge | Count | What it is |
 |---|---|---|---|
-| MCQ | MCQ | 1311 | Single-best-answer with same-category, length-balanced options |
-| Fill-up | FILL UP | 1075 | Blank (___) completion — definitions, milestones, table rows |
-| True / False | TRUE / FALSE | 257 | Statement judged true or subtly false (~50/50, keyboard T/F) |
-| Match the following | MATCH | 107 | Column A ↔ deranged Column B; pick the correct combination |
-| Clinical case | CLINICAL | 120 | Hand-written patient vignette → diagnosis / next step |
-| Odd one out | ODD ONE OUT | 73 | Three share a property, one doesn't (exp names the property) |
+| MCQ | MCQ | 1832 | Single-best-answer with same-category, length-balanced options |
+| Fill-up | FILL UP | 1158 | Blank (___) completion — definitions, milestones, table rows |
+| True / False | TRUE / FALSE | 318 | Statement judged true or subtly false (~50/50, keyboard T/F) |
+| Match the following | MATCH | 147 | Column A ↔ deranged Column B; pick the correct combination |
+| Clinical case | CLINICAL | 158 | Hand-written patient vignette → diagnosis / next step |
+| Odd one out | ODD ONE OUT | 98 | Three share a property, one doesn't (exp names the property) |
 
 Options shuffle every run; the correct answer's position is also randomised in the data.
 
-## Anti-predictability rules (applied by `audit.py` to all 25 chapters)
+## Anti-predictability rules (applied to all 35 chapters)
 - **Length-giveaway eliminated**: 46.9% → 10.3% of questions had a correct option >1.6× longer than every distractor (now trimmed, detail moved to the explanation, or distractors enriched with real same-section values)
 - **546 junk distractors removed** ("Surgery", "Observation only", "Only heart", "Normal X-ray"…) — replaced with real confusable values mined from the same book section
 - **Same-section distractor pool only** — replacements keep the option category (drugs vs drugs, ages vs ages)
@@ -67,5 +67,12 @@ Options shuffle every run; the correct answer's position is also randomised in t
 | 26 | Airway Malformations & Foreign Bodies (p116–119) | 121 | 9 | 65·30·9·7·4·6 |
 | 27 | Asthma (p120–123) | 141 | 10 | 69·35·17·7·6·7 |
 | 28 | Respiratory Infections (p124–128) | 140 | 13 | 49·42·21·8·10·10 |
+| 29 | Cystic Fibrosis (p130–132) | 88 | 6 | 60·10·6·5·5·2 |
+| 30 | Fetal Circulation & Intro to CHD (p133–135) | 71 | 6 | 48·10·4·4·4·1 |
+| 31 | Acyanotic Congenital Heart Defects (p136–141) | 149 | 10 | 89·25·15·7·8·5 |
+| 32 | Cyanotic Congenital Heart Defects (p142–148) | 143 | 11 | 106·11·9·6·5·6 |
+| 33 | Acute Rheumatic Fever (p149–152) | 110 | 9 | 74·12·11·5·5·3 |
+| 34 | Congenital Anomalies of Kidney & Urinary Tract (p153–156) | 93 | 8 | 63·9·6·6·6·3 |
+| 35 | Nephrotic and Nephritic Syndrome (p157–161) | 114 | 9 | 81·6·10·7·5·5 |
 
-Next: CH29 Cystic Fibrosis (p130–132)
+Next: CH36 Inherited Tubular Disorders (p162–165)
