@@ -1,2 +1,8 @@
 __pycache__/
 render2935/
+render4345/
+ocr_pages.py
+zoom_ocr.py
+rot_ocr.py
+blob.png
+char2.png
