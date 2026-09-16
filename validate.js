@@ -326,5 +326,48 @@ for (const ch of Object.keys(NEW_CH2)) {
 }
 console.log('— after CH46–CH50'); ok(A.CHAPTERS.filter(c => c.live).length === LIVE, 'live chapter count unchanged after the CH46–CH50 playthroughs');
 
+/* ---------------- 11. full CH51 playthrough (Congenital Haemolytic Anaemia) ---------------- */
+const NEW_CH3 = { 51: [16, 266] };
+for (const ch of Object.keys(NEW_CH3)) {
+  const [uN, qN] = NEW_CH3[ch];
+  const cu = A.unitsOf(+ch);
+  ok(cu.length === uN, `CH${ch} has ${uN} units (${cu.length})`);
+  const qTotal = cu.reduce((n, u) => n + u.qs.length, 0);
+  ok(qTotal === qN, `CH${ch} has ${qN} questions (${qTotal})`);
+  const seen = new Set();
+  let played = 0, multi = 0, matchBad = 0, blankBad = 0, stemBad = 0;
+  for (const u of cu) {
+    A.openGuide(u);
+    ok($('gTitle').textContent === u.title && $('gCount').textContent.startsWith(u.qs.length + ' questions'), `guide renders for ${u.id}`);
+    ok(($('gText').textContent || '').length > 60, `${u.id} guide text present`);
+    A.beginUnit();
+    ok(A.order.length === u.qs.length, `${u.id}: ${A.order.length} questions in book order`);
+    while (A.order[A.idx]) {
+      const cur = A.order[A.idx], t = cur.q.type || 'mcq';
+      seen.add(t);
+      // format-specific UI assertions
+      if (t === 'match') { if (!/matchbox/.test('matchbox') || $('matchbox').innerHTML.indexOf('A.') === -1) matchBad++; }
+      if (t === 'fill') { if ($('qtext').innerHTML.indexOf('class="blank"') === -1) blankBad++; }
+      if (t === 'case') { if (!$('vign').textContent || $('vign').classList.contains('hidden')) stemBad++; }
+      const btns = $('opts').children;
+      const ci = btns.map((b, i) => (cur.opts[i] && cur.opts[i].ok) ? i : -1).filter(i => i >= 0);
+      if (ci.length !== 1) multi++;
+      btns[ci[0]].click();
+      A.nextQ(); played++;
+    }
+    ok(A.S.done.includes(u.id), `${u.id} marked done`);
+  }
+  ok(played === qN, `all ${qN} CH${ch} questions answered (${played})`);
+  ok(multi === 0, `every CH${ch} question has exactly one correct option`);
+  ok(matchBad === 0, `CH${ch} match questions render both columns (${matchBad} bad)`);
+  ok(blankBad === 0, `CH${ch} fill questions render the blank (${blankBad} bad)`);
+  ok(stemBad === 0, `CH${ch} clinical cases render the vignette stem (${stemBad} bad)`);
+  ok(['mcq', 'fill', 'tf', 'match', 'case', 'odd'].every(t => seen.has(t)), `CH${ch} covers all 6 formats: ${[...seen].sort().join(', ')}`);
+}
+console.log('— after CH51'); ok(A.CHAPTERS.filter(c => c.live).length === LIVE, 'live chapter count unchanged after the CH51 playthrough');
+ok(LIVE === 51, `51 live chapters registered (${LIVE})`);
+ok(A.QUESTIONS.length === 5995, `bank holds 5995 questions (${A.QUESTIONS.length})`);
+ok(A.UNITS.length === 419, `bank holds 419 units (${A.UNITS.length})`);
+
 console.log(fails ? `\n${fails} FAILURES` : '\nALL CHECKS PASSED ✓');
 process.exit(fails ? 1 : 0);
