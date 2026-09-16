@@ -78,13 +78,13 @@ Haematology (50–52) · Miscellaneous (53–54).
 | 33 | Acute Rheumatic Fever | 149 | 4 | ✅ DONE — 110 Q, 9 units |
 | 34 | Congenital Anomalies of Kidney and Urinary Tract | 153 | 4 | ✅ DONE — 93 Q, 8 units |
 | 35 | Nephrotic and Nephritic Syndrome | 157 | 5 | ✅ DONE — 114 Q, 9 units |
-| 36 | Inherited Tubular Disorders | 162 | 4 | ⏳ |
-| 37 | Acute Kidney Injury and Chronic Kidney Disease | 166 | 5 | ⏳ |
-| 38 | UR and UTI Management Guidelines | 171 | 4 | ⏳ |
-| 39 | Congenital Anomalies and Hydrocephalus | 175 | 6 | ⏳ |
-| 40 | Seizure Disorders | 181 | 6 | ⏳ |
-| 41 | Cerebral Palsy and CNS Infections | 187 | 7 | ⏳ |
-| 42 | Neuromuscular Disorders | 194 | 5 | ⏳ |
+| 36 | Inherited Tubular Disorders | 162 | 4 | ✅ DONE — 67 Q, 5 units |
+| 37 | Acute Kidney Injury and Chronic Kidney Disease | 166 | 5 | ✅ DONE — 114 Q, 6 units |
+| 38 | VUR and UTI Management Guidelines | 171 | 4 | ✅ DONE — 74 Q, 4 units |
+| 39 | Congenital Anomalies and Hydrocephalus | 175 | 6 | ✅ DONE — 123 Q, 5 units |
+| 40 | Seizure Disorders | 181 | 6 | ✅ DONE — 135 Q, 6 units |
+| 41 | Cerebral Palsy and CNS Infections | 187 | 7 | ✅ DONE — 169 Q, 7 units |
+| 42 | Neuromuscular Disorders | 194 | 5 | ✅ DONE — 139 Q, 6 units |
 | 43 | Growth Hormone Deficiency and Hypothyroidism | 199 | 5 | ⏳ |
 | 44 | Adrenal Disorders in Children | 204 | 5 | ⏳ |
 | 45 | Pubertal Disorders | 209 | 4 | ⏳ |
@@ -203,5 +203,15 @@ Page math: 258 content pages (2–259) + 1 cover = 259 PDF pages ✓
   - Format mix 69 MCQ · 35 fill · 17 T/F (9 T / 8 F) · 7 match · 7 odd · 6 clinical cases; answer-key rotation → 31/31/31/31 non-TF index distribution; 5 fill stems normalised to `___`
   - Build: `validate.py` **2803 Q / 231 U / 27 chapters / 0 errors** (1 pre-existing warn C5-038); `node --check` OK; `validate.js` extended with a **full CH27 playthrough (all 141 Q across 10 units)** → ALL CHECKS PASSED
 - [x] App rebuilt: **2803 questions live (27 chapters, 231 units)** — home hero shows "27 of 54"
-- [ ] **NEXT: CH28 Respiratory Infections (p124–129)**
-- [ ] Pending in this book: CH28–CH54 (source PDFs already present in `source/chapters/`)
+- [x] **CH28 Respiratory Infections through CH35 Nephrotic and Nephritic Syndrome:** delivered in the preceding respiratory, cardiovascular and renal batches; 3711 questions / 303 units / 35 live chapters.
+- [x] **GENITOURINARY + NEUROLOGY BATCH — CH36–CH42 (p162–198): DONE** — source-page visual pass, question authoring, data validation, app rebuild and complete browser-flow simulation:
+  - **CH36 Inherited Tubular Disorders** — 67 Q, 5 units: tubular presentation; Fanconi type-II RTA, associations and Lowe/cystinosis; Bartter; Gitelman; Liddle/evaluation. 40 MCQ · 8 fill-ups · 5 T/F · 6 match · 5 clinical cases · 3 odd-one-out.
+  - **CH37 Acute Kidney Injury and Chronic Kidney Disease** — 114 Q, 6 units: KDIGO-style AKI criteria/staging, causes and emergency fluid/electrolyte management, D+/D− HUS, CKD definition/stages/complications and KRT. 85 MCQ · 10 fill-ups · 5 T/F · 8 match · 4 clinical cases · 2 odd-one-out.
+  - **CH38 VUR & UTI Management Guidelines** — 74 Q, 4 units: VUR mechanism, VCUG grading/follow-up/prophylaxis, UTI classification/culture thresholds and treatment/imaging algorithm. 51 MCQ · 8 fill-ups · 4 T/F · 4 match · 4 clinical cases · 3 odd-one-out.
+  - **CH39 Congenital Anomalies & Hydrocephalus** — 123 Q, 5 units: caudal/cranial NTDs and prevention, neuronal migration disorders, obstructive/non-obstructive hydrocephalus, Chiari/Dandy-Walker/vein-of-Galen, clinical recognition and shunt care. 92 MCQ · 11 fill-ups · 5 T/F · 5 match · 5 clinical cases · 5 odd-one-out.
+  - **CH40 Seizure Disorders** — 135 Q, 6 units: seizure/febrile-seizure definitions and recurrence, absence/JME/West, Dravet/Lennox-Gastaut/status and the status algorithm. 105 MCQ · 7 fill-ups · 6 T/F · 6 match · 6 clinical cases · 5 odd-one-out.
+  - **CH41 Cerebral Palsy & CNS Infections** — 169 Q, 7 units: CP classification/management, pyogenic and TB meningitis, JE/HSV encephalitis and NCC. 135 MCQ · 7 fill-ups · 7 T/F · 7 match · 7 clinical cases · 6 odd-one-out.
+  - **CH42 Neuromuscular Disorders** — 139 Q, 6 units: SMA genetics/types/modern therapy, DMD, Becker/FSHD/limb-girdle disease and myotonic dystrophy. 112 MCQ · 3 fill-ups · 6 T/F · 6 match · 6 clinical cases · 6 odd-one-out.
+  - **Quality gates:** 821 source-grounded new questions; every chapter contains all six formats; case options are same-domain diagnostic/management alternatives; match columns are deranged; all 4-option answer keys rotate before app-level option shuffling; 0 generic fallback distractors. `validate.py`: **4532 Q / 342 units / 42 files / 0 errors / 0 warnings**. `node --check`: pass. `validate.js`: full unit-by-unit CH29–CH42 playthrough, exactly one correct rendered option per question, all format UI states, local storage and 42 live chapters — **ALL CHECKS PASSED**.
+- [ ] **NEXT: CH43 Growth Hormone Deficiency and Hypothyroidism (p199–203)**
+- [ ] Pending in this book: CH43–CH54 (source PDFs already present in `source/chapters/`)

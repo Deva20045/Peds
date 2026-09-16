@@ -3,7 +3,7 @@
 Live app: **https://deva20045.github.io/Peds/**
 
 - Single-HTML, offline, no dependencies
-- **3711 questions · 303 units · 35 chapters live (CH1–CH35)**
+- **4532 questions · 342 units · 42 chapters live (CH1–CH42)**
 - Build: `python3 build_app.py` → `pulse-peds-complete.html` + `index.html`
 - Storage keys `pulse_peds_*` (independent from ORTHO)
 
@@ -21,7 +21,7 @@ Every unit now mixes **six formats** — no more single-format drilling:
 
 Options shuffle every run; the correct answer's position is also randomised in the data.
 
-## Anti-predictability rules (applied to all 35 chapters)
+## Anti-predictability rules (applied to all 42 live chapters)
 - **Length-giveaway eliminated**: 46.9% → 10.3% of questions had a correct option >1.6× longer than every distractor (now trimmed, detail moved to the explanation, or distractors enriched with real same-section values)
 - **546 junk distractors removed** ("Surgery", "Observation only", "Only heart", "Normal X-ray"…) — replaced with real confusable values mined from the same book section
 - **Same-section distractor pool only** — replacements keep the option category (drugs vs drugs, ages vs ages)
@@ -74,5 +74,12 @@ Options shuffle every run; the correct answer's position is also randomised in t
 | 33 | Acute Rheumatic Fever (p149–152) | 110 | 9 | 74·12·11·5·5·3 |
 | 34 | Congenital Anomalies of Kidney & Urinary Tract (p153–156) | 93 | 8 | 63·9·6·6·6·3 |
 | 35 | Nephrotic and Nephritic Syndrome (p157–161) | 114 | 9 | 81·6·10·7·5·5 |
+| 36 | Inherited Tubular Disorders (p162–165) | 67 | 5 | 40·8·5·6·5·3 |
+| 37 | Acute Kidney Injury & Chronic Kidney Disease (p166–170) | 114 | 6 | 85·10·5·8·4·2 |
+| 38 | VUR & UTI Management Guidelines (p171–174) | 74 | 4 | 51·8·4·4·4·3 |
+| 39 | Congenital Anomalies & Hydrocephalus (p175–180) | 123 | 5 | 92·11·5·5·5·5 |
+| 40 | Seizure Disorders (p181–186) | 135 | 6 | 105·7·6·6·6·5 |
+| 41 | Cerebral Palsy & CNS Infections (p187–193) | 169 | 7 | 135·7·7·7·7·6 |
+| 42 | Neuromuscular Disorders (p194–198) | 139 | 6 | 112·3·6·6·6·6 |
 
-Next: CH36 Inherited Tubular Disorders (p162–165)
+Next: CH43 Growth Hormone Deficiency and Hypothyroidism (p199–203)
