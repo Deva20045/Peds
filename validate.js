@@ -262,8 +262,8 @@ ok(n28 === q28, `all ${q28} CH28 questions answered (${n28})`);
 ok(multi28 === 0, 'every CH28 question has exactly one correct option');
 ok(['mcq', 'fill', 'tf', 'match', 'case', 'odd'].every(t => seen28.has(t)), `CH28 covers all 6 formats: ${[...seen28].sort().join(', ')}`);
 
-/* ---------------- 9. full CH29–CH35 playthroughs (Cardio, CF, Renal) ---------------- */
-const NEW_CH = { 29: [6, 88], 30: [6, 71], 31: [10, 149], 32: [11, 143], 33: [9, 110], 34: [8, 93], 35: [9, 114] };
+/* ---------------- 9. full CH29–CH42 playthroughs (Cardio, Renal, Neurology) ---------------- */
+const NEW_CH = { 29: [6, 88], 30: [6, 71], 31: [10, 149], 32: [11, 143], 33: [9, 110], 34: [8, 93], 35: [9, 114], 36: [5, 67], 37: [6, 114], 38: [4, 74], 39: [5, 123], 40: [6, 135], 41: [7, 169], 42: [6, 139] };
 for (const ch of Object.keys(NEW_CH)) {
   const [uN, qN] = NEW_CH[ch];
   const cu = A.unitsOf(+ch);
@@ -292,7 +292,7 @@ for (const ch of Object.keys(NEW_CH)) {
   ok(multi === 0, `every CH${ch} question has exactly one correct option`);
   ok(['mcq', 'fill', 'tf', 'match', 'case', 'odd'].every(t => seen.has(t)), `CH${ch} covers all 6 formats: ${[...seen].sort().join(', ')}`);
 }
-console.log('— after CH29–CH35'); ok(A.CHAPTERS.filter(c => c.live).length === LIVE, 'live chapter count unchanged after batch playthroughs');
+console.log('— after CH29–CH42'); ok(A.CHAPTERS.filter(c => c.live).length === LIVE, 'live chapter count unchanged after batch playthroughs');
 
 console.log(fails ? `\n${fails} FAILURES` : '\nALL CHECKS PASSED ✓');
 process.exit(fails ? 1 : 0);
