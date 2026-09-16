@@ -3,7 +3,7 @@
 Live app: **https://deva20045.github.io/Peds/**
 
 - Single-HTML, offline, no dependencies
-- **5729 questions · 403 units · 50 chapters live (CH1–CH50)**
+- **6445 questions · 442 units · 54 chapters live (CH1–CH54) — book complete ✓**
 - Build: `python3 build_app.py` → `pulse-peds-complete.html` + `index.html`
 - Storage keys `pulse_peds_*` (independent from ORTHO)
 
@@ -12,17 +12,17 @@ Every unit now mixes **six formats** — no more single-format drilling:
 
 | Format | Badge | Count | What it is |
 |---|---|---|---|
-| MCQ | MCQ | 3094 | Single-best-answer with same-category, length-balanced options |
-| Fill-up | FILL UP | 1439 | Blank (___) completion — definitions, milestones, table rows |
-| True / False | TRUE / FALSE | 467 | Statement judged true or subtly false (257 T / 210 F, keyboard T/F) |
-| Match the following | MATCH | 256 | Column A ↔ deranged Column B; pick the correct combination |
-| Clinical case | CLINICAL | 288 | Hand-written patient vignette → diagnosis / next step |
-| Odd one out | ODD ONE OUT | 185 | Three share a property, one doesn't (exp names the property) |
+| MCQ | MCQ | 3399 | Single-best-answer with same-category, length-balanced options |
+| Fill-up | FILL UP | 1605 | Blank (___) completion — definitions, milestones, table rows |
+| True / False | TRUE / FALSE | 555 | Statement judged true or subtly false (300 T / 255 F, keyboard T/F) |
+| Match the following | MATCH | 299 | Column A ↔ deranged Column B; pick the correct combination |
+| Clinical case | CLINICAL | 358 | Hand-written patient vignette → diagnosis / next step |
+| Odd one out | ODD ONE OUT | 229 | Three share a property, one doesn't (exp names the property) |
 
 Options shuffle every run; the correct answer's position is also randomised in the data.
 
 ## Match-question integrity (Sep 2026 full-bank repair)
-Every one of the 256 match questions was re-derived from its explanation and rewritten
+Every one of the 299 match questions was re-derived from its explanation and rewritten
 (auto-detect + hand repair) so that **the marked "correct" mapping is always the semantically
 true pairing** — earlier auto-generated matches had a shuffled key against the prose pairs.
 A permanent checker re-verifies this on every build.
@@ -96,4 +96,9 @@ A permanent checker re-verifies this on every build.
 | 49 | Rheumatic Disorders of Childhood (p227–234) | 189 | 9 | 111·26·17·10·16·9 |
 | 50 | Approach to Anaemia & Nutritional Anaemia (p235–240) | 150 | 8 | 64·45·15·8·10·8 |
 
-Next: CH51 (p241–247) — Congenital Haemolytic Anaemia
+| 51 | Congenital Haemolytic Anaemia (p241–247) | 266 | 16 | 133·44·32·19·22·16 |
+| 52 | Bleeding Disorders (p248–252) | 176 | 10 | 68·45·21·11·18·13 |
+| 53 | Paediatric Resuscitation (p253–255) | 120 | 6 | 44·33·17·6·14·6 |
+| 54 | Shock (p256–259) | 154 | 7 | 60·44·18·7·16·9 |
+
+All 54 chapters complete — the full Marrow Paediatrics E8 book (p2–259) is live.
